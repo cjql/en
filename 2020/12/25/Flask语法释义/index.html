@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Flask语法释义 | 千灵镜</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="按官方样例对flask语句进行详解。参考是用于查询官方文档。备忘录存储命令清单，后续还需添加。文件结构有助于速览。文件依赖给出各个文件的引用关系。flaskr文件逐个详解，对项目内的每条独立命令进行解析。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Flask语法释义">
+<meta property="og:url" content="http://yoursite.com/en/2020/12/25/Flask%E8%AF%AD%E6%B3%95%E9%87%8A%E4%B9%89/index.html">
+<meta property="og:site_name" content="千灵镜">
+<meta property="og:description" content="按官方样例对flask语句进行详解。参考是用于查询官方文档。备忘录存储命令清单，后续还需添加。文件结构有助于速览。文件依赖给出各个文件的引用关系。flaskr文件逐个详解，对项目内的每条独立命令进行解析。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-12-24T17:23:47.000Z">
+<meta property="article:modified_time" content="2019-12-25T17:49:24.194Z">
+<meta property="article:author" content="CJ">
+<meta property="article:tag" content="Flask">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/en/atom.xml" title="千灵镜" type="application/atom+xml">
+  
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/en/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/en/" id="logo">千灵镜</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/en/" id="subtitle">神驰八极，心游万仞</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/en/">Home</a>
+        
+          <a class="main-nav-link" href="/en/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/en/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com/en"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Flask语法释义" class="article article-type-post" itemscope
+  itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/en/2020/12/25/Flask%E8%AF%AD%E6%B3%95%E9%87%8A%E4%B9%89/" class="article-date">
+  <time datetime="2020-12-24T17:23:47.000Z" itemprop="datePublished">2020-12-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      Flask语法释义
+    </h1>
+  
+
+    </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      <!-- Table of Contents -->
+      
+      <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#参考"><span class="toc-number">1.</span> <span class="toc-text">参考</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#备忘录"><span class="toc-number">2.</span> <span class="toc-text">备忘录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文件结构概览"><span class="toc-number">3.</span> <span class="toc-text">文件结构概览</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文件关系依赖"><span class="toc-number">4.</span> <span class="toc-text">文件关系依赖</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#flaskr文件逐个解析"><span class="toc-number">5.</span> <span class="toc-text">flaskr文件逐个解析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#templates文件夹"><span class="toc-number">5.1.</span> <span class="toc-text">templates文件夹</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#base-html文件"><span class="toc-number">5.1.1.</span> <span class="toc-text">base.html文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#blog"><span class="toc-number">5.1.2.</span> <span class="toc-text">blog</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#blog-html"><span class="toc-number">5.1.2.1.</span> <span class="toc-text">blog.html</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#blogCreate-html"><span class="toc-number">5.1.2.2.</span> <span class="toc-text">blogCreate.html</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#blogUpdate-html"><span class="toc-number">5.1.2.3.</span> <span class="toc-text">blogUpdate.html</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#auth"><span class="toc-number">5.1.3.</span> <span class="toc-text">auth</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#login-html"><span class="toc-number">5.1.3.1.</span> <span class="toc-text">login.html</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#register-html"><span class="toc-number">5.1.3.2.</span> <span class="toc-text">register.html</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#schema-sql"><span class="toc-number">5.2.</span> <span class="toc-text">schema.sql</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#db-py"><span class="toc-number">5.3.</span> <span class="toc-text">db.py</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#auth-py"><span class="toc-number">5.4.</span> <span class="toc-text">auth.py</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#事前准备"><span class="toc-number">6.</span> <span class="toc-text">事前准备</span></a></li></ol>
+      </div>
+      
+      <p>按官方样例对flask语句进行详解。<code>参考</code>是用于查询官方文档。<code>备忘录</code>存储命令清单，后续还需添加。<code>文件结构</code>有助于速览。<code>文件依赖</code>给出各个文件的引用关系。<code>flaskr文件逐个详解</code>，对项目内的每条独立命令进行解析。</p>
+<a id="more"></a>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p><a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/#a-minimal-application" target="_blank" rel="noopener">https://flask.palletsprojects.com/en/1.1.x/quickstart/#a-minimal-application</a><br><a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/#variable-rules" target="_blank" rel="noopener">https://flask.palletsprojects.com/en/1.1.x/quickstart/#variable-rules</a><br><a href="https://dormousehole.readthedocs.io/en/latest/tutorial/factory.html" target="_blank" rel="noopener">https://dormousehole.readthedocs.io/en/latest/tutorial/factory.html</a><br><a href="https://dormousehole.readthedocs.io/en/latest/tutorial/database.html" target="_blank" rel="noopener">https://dormousehole.readthedocs.io/en/latest/tutorial/database.html</a></p>
+<h1 id="备忘录"><a href="#备忘录" class="headerlink" title="备忘录"></a>备忘录</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"><span class="meta">@app.route('/')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello_world</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'Hello, World!'</span></span><br><span class="line"><span class="meta">@app.route('/projects/')</span></span><br><span class="line"><span class="meta">@app.route('/login', methods=['GET', 'POST'])</span></span><br><span class="line"><span class="meta">@app.route('/user/&lt;username&gt;')</span></span><br><span class="line"><span class="meta">@app.route('/post/&lt;int:post_id&gt;')</span></span><br><span class="line"><span class="meta">@app.route('/path/&lt;path:subpath&gt;')</span></span><br></pre></td></tr></table></figure>
+<h1 id="文件结构概览"><a href="#文件结构概览" class="headerlink" title="文件结构概览"></a>文件结构概览</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">flaskr</span><br><span class="line">    static</span><br><span class="line">        style.css</span><br><span class="line">        table.js</span><br><span class="line">    templates √</span><br><span class="line">        base.html  √ <span class="number">1</span></span><br><span class="line">        auth √</span><br><span class="line">            login.html √ <span class="number">5</span></span><br><span class="line">            register.html √ <span class="number">6</span></span><br><span class="line">        blog √</span><br><span class="line">            blog.html √ <span class="number">2</span></span><br><span class="line">            blogCreate.html √ <span class="number">3</span> </span><br><span class="line">            blogUpdate.html √ <span class="number">4</span></span><br><span class="line">    schema.sql √ <span class="number">7</span></span><br><span class="line">    __init__.py</span><br><span class="line">    auth.py √ <span class="number">9</span></span><br><span class="line">    blog.py</span><br><span class="line">    db.py √ <span class="number">8</span></span><br></pre></td></tr></table></figure>
+<h1 id="文件关系依赖"><a href="#文件关系依赖" class="headerlink" title="文件关系依赖"></a>文件关系依赖</h1><p><code>A⇒B</code>：表示B要调用A文件里的内容。<br>schema.sql⇒db.py⇒auth.py</p>
+<h1 id="flaskr文件逐个解析"><a href="#flaskr文件逐个解析" class="headerlink" title="flaskr文件逐个解析"></a>flaskr文件逐个解析</h1><h2 id="templates文件夹"><a href="#templates文件夹" class="headerlink" title="templates文件夹"></a>templates文件夹</h2><h3 id="base-html文件"><a href="#base-html文件" class="headerlink" title="base.html文件"></a>base.html文件</h3><p><code>&lt;title&gt;{% block title %}{% endblock %}&lt;/title&gt;</code> </p>
+<ul>
+<li>其他文档里，用<code>{% block title %}{% endblock %}</code>括起来的内容都会转化为title。</li>
+<li><code>&lt;title&gt;&lt;/title&gt;</code>：决定其内容是title。 </li>
+<li><code>{% block title %}{% endblock %}</code>：起占位作用。title可以是任意的html标签。</li>
+<li>如果static文件以外的文件里的html元素不用block包裹，则可能无法生效。<br><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;{{ url_for('static', filename='style.css') }}&quot;&gt;</code></li>
+<li>static是flaskr的一级子文件夹。</li>
+<li>style.css是static里的文件。<br><code>&lt;script type=text/javascript src=&quot;{{ url_for('static', filename='table.js') }}&quot;&gt;&lt;/script&gt;</code></li>
+<li>全局script。<br><code>&lt;nav&gt;&lt;/nav&gt;</code></li>
+<li>导航栏。<br><code>&lt;a href=&quot;{{ url_for('blog.shixi')}}&quot;&gt;图集&lt;/a&gt;</code></li>
+<li>blog是flaskr里的py文件。</li>
+<li>shixi是blog.py的一个路径装饰器下的函数。<br><code>{{ g.user['username'] }}</code></li>
+<li>用户名，网页刷新时自动传入。<br><code>{% if g.user %}{% else %}{% endif %}</code></li>
+<li>条件表达式。<strong>是谁的呢</strong>？<br><code>{% if g.user %}</code></li>
+<li>如果已登录。<br><code>&lt;ul&gt;&lt;/ul&gt;</code></li>
+<li><strong>通过css来控制对齐吗？</strong><br><code>&lt;section class=&quot;content&quot;&gt;&lt;/section&gt;</code></li>
+<li>子html的格式定义。<br><code>{% for message in get_flashed_messages() %}</code></li>
+<li><strong>全项目只用到了flask.flash(error)。用于程序出错时，在页面显示错误。error可自定义。</strong><br><code>{{ message }}</code></li>
+<li><strong>flash错误信息。</strong><h3 id="blog"><a href="#blog" class="headerlink" title="blog"></a>blog</h3><h4 id="blog-html"><a href="#blog-html" class="headerlink" title="blog.html"></a>blog.html</h4><code>{% extends 'base.html' %}</code></li>
+<li>继承自base.html。<br><code>&lt;a class=&quot;action&quot; href=&quot;{{ url_for('blog.create') }}&quot;&gt;New&lt;/a&gt;</code></li>
+<li>不传数据，只调用函数。<br><code>&lt;a class=&quot;action&quot; href=&quot;{{ url_for('blog.update', id=post['id']) }}&quot;&gt;编辑&lt;/a&gt;</code></li>
+<li>传数据，且调用函数。<code>id=post[&#39;id&#39;])</code>用来传参。<br><code>{% for post in posts %}</code></li>
+<li>自动传post。post的内容在blog.py里面定义。<br><code>{% if g.user['id'] == post['author_id'] %}</code></li>
+<li>只显示当前登录用户的数据。<br><code>post[&#39;created&#39;].</code></li>
+<li>获取post的键created的值。<br><code>{}</code></li>
+<li>html内的逻辑语句或占位符。<br><code>{{}}</code></li>
+<li>抽取html的元素或属性，括起来用于传递参数。传参用flask的方法，如url_for()、request.form[]。<h4 id="blogCreate-html"><a href="#blogCreate-html" class="headerlink" title="blogCreate.html"></a>blogCreate.html</h4><code>&lt;form method=&quot;post&quot;&gt;&lt;/form&gt;</code></li>
+<li>里面的内容可以传参了。<br><code>&lt;input name=&quot;title&quot; id=&quot;title&quot; value=&quot;{{ request.form['title'] }}&quot; required&gt;</code><br><code>&lt;textarea name=&quot;body&quot; id=&quot;body&quot;&gt;{{ request.form['body'] }}&lt;/textarea&gt;</code><br><code>&lt;input type=&quot;submit&quot; value=&quot;Save&quot;&gt;</code></li>
+<li>html文件的form表单是通过name属性来传值给py文件的。name删掉会报错，id属性删掉了不会。</li>
+<li>双大括号外是否有引号取决于原html<h4 id="blogUpdate-html"><a href="#blogUpdate-html" class="headerlink" title="blogUpdate.html"></a>blogUpdate.html</h4><code>&lt;input name=&quot;title&quot; id=&quot;title&quot; value=&quot;{{ request.form['title'] or post['title'] }}&quot;</code><br><code>&lt;textarea name=&quot;body&quot; id=&quot;body&quot;&gt;{{ request.form['body'] or post['body'] }}&lt;/textarea&gt;</code></li>
+<li>已有数据时自动填充或没有数据。<br><code>&lt;form action=&quot;{{ url_for('blog.delete', id=post['id']) }}&quot; method=&quot;post&quot;&gt;</code></li>
+<li>调用blog里的python函数，并传递参数。<h3 id="auth"><a href="#auth" class="headerlink" title="auth"></a>auth</h3><h4 id="login-html"><a href="#login-html" class="headerlink" title="login.html"></a>login.html</h4><code>&lt;input type=&quot;password&quot; name=&quot;password&quot; id=&quot;password&quot; required&gt;</code></li>
+<li>type=”password” 会自动加密。加密函数在anth.py中定义。<h4 id="register-html"><a href="#register-html" class="headerlink" title="register.html"></a>register.html</h4>除了标题和submit按钮的值外，其余的和login.html一模一样。<h2 id="schema-sql"><a href="#schema-sql" class="headerlink" title="schema.sql"></a>schema.sql</h2>存放sql语句。用来初始化数据库。<h2 id="db-py"><a href="#db-py" class="headerlink" title="db.py"></a>db.py</h2>太漂亮了，每个函数就几行。<br>lib依赖：<br>click<br>sqlite3<br>flask：current_app、g、.cli.with_appcontext<br>用到的命令：<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">g.db</span><br><span class="line">g.db.row_factory</span><br><span class="line">g.db.executescript(f.read().decode(<span class="string">"utf8"</span>))</span><br><span class="line">g.pop(<span class="string">"db"</span>, <span class="literal">None</span>)</span><br><span class="line">current_app.config[<span class="string">"DATABASE"</span>]</span><br><span class="line"><span class="keyword">with</span> current_app.open_resource(<span class="string">"schema.sql"</span>) <span class="keyword">as</span> f</span><br><span class="line">sqlite3.Row</span><br><span class="line"><span class="meta">@click.command("init-db")</span></span><br><span class="line">click.echo(<span class="string">"Initialized the database."</span>)</span><br><span class="line">app.teardown_appcontext(close_db)</span><br><span class="line">app.cli.add_command(init_db_command)</span><br><span class="line">get_db()：用于连接数据库</span><br></pre></td></tr></table></figure>
+<h2 id="auth-py"><a href="#auth-py" class="headerlink" title="auth.py"></a>auth.py</h2>lib依赖：</li>
+<li>functools</li>
+<li>flask：Blueprint、flash、g、redirect、render_template、request、session、url_for</li>
+<li>werkzeug.security：<ul>
+<li>检查密码是否一致：check_password_hash</li>
+<li>加密密码：generate_password_hash</li>
+</ul>
+</li>
+<li>flaskr.db ：get_db（用于链接数据库）<br>用到的命令:<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bp = Blueprint(<span class="string">"auth"</span>, __name__, url_prefix=<span class="string">"/auth"</span>)</span><br></pre></td></tr></table></figure></li>
+<li>auth：蓝图名。</li>
+<li><code>__name__</code>。</li>
+<li>url_prefix：bp.route的前缀路径。<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@functools.wraps(view)</span></span><br></pre></td></tr></table></figure></li>
+<li>复制属性。<ul>
+<li>《Python 3标准库》，苏金国，201903，P118.</li>
+<li><em>The Python 3 Standard Library by Example.pdf</em>,DougHellmann,2017,P149.<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wrapped_view(**kwargs)</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>如果没登录，就重定向到登录页。</li>
+<li>否则返回view的参数。<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@bp.before_app_request</span></span><br></pre></td></tr></table></figure></li>
+<li>请求前的装饰器。<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">session.get(<span class="string">"user_id"</span>)</span><br></pre></td></tr></table></figure></li>
+<li>获取用ID。<ul>
+<li>如果是None，则把None赋值给g.user。</li>
+<li>否则从用户user表中取出id与session.get(“user_id”)相同的那条记录。<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">get_db().execute(<span class="string">"SELECT * FROM user WHERE id = ?"</span>, (user_id,)).fetchone()</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>连接数据库并查询，取一项。<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">db = get_db()</span><br><span class="line">db.excute(sql).fetchone()</span><br><span class="line">db.commit()</span><br><span class="line"><span class="keyword">if</span> request.method == <span class="string">"POST"</span>:</span><br><span class="line">    username = request.form[<span class="string">"username"</span>]</span><br></pre></td></tr></table></figure></li>
+<li>解析POST过来的函数。<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flash(error)</span><br></pre></td></tr></table></figure></li>
+<li>检查错误。<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> redirect(url_for(<span class="string">"auth.login"</span>))</span><br></pre></td></tr></table></figure></li>
+<li>重定向到auth.py的login函数。form表单数据提交后执行的函数。<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">return</span> render_template(<span class="string">"auth/register.html"</span>)</span><br></pre></td></tr></table></figure></li>
+<li>含form表单的当前路径显示的网页。<br><a href="https://realpython.com/search?q=flask-by-example" target="_blank" rel="noopener">https://realpython.com/search?q=flask-by-example</a><h1 id="事前准备"><a href="#事前准备" class="headerlink" title="事前准备"></a>事前准备</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/pallets/flask</span><br><span class="line">cd C:\Users\cj\Documents\GitHub\flask\examples\tutorial\flaskr</span><br><span class="line">py <span class="number">-3</span> -m venv venv</span><br><span class="line">venv/Scripts/activate</span><br><span class="line">flask init-db <span class="comment"># 生成数据库文件</span></span><br><span class="line">set FLASK_APP=flaskr</span><br><span class="line">set FLASK_ENV=development</span><br><span class="line">flask run</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/en/2020/12/25/Flask%E8%AF%AD%E6%B3%95%E9%87%8A%E4%B9%89/" data-id="ck4lrulk9000004vx52uz6qyl" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/en/tags/Flask/" rel="tag">Flask</a></li></ul>
+
+    </footer>
+  </div>
+  
+  
+<nav id="article-nav">
+  
+    <a href="/en/2023/12/25/Python%E7%88%AC%E8%99%AB%E7%9F%A5%E8%AF%86%E7%BB%93%E6%9E%84/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Python爬虫知识结构
+        
+      </div>
+    </a>
+  
+  
+    <a href="/en/2020/12/25/cs_learning_path/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">cs_learning_path</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/en/categories/Diary/">Diary</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/Diary/Games/">Games</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/Diary/PlayStation/">PlayStation</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/Life/">Life</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/Flask/" rel="tag">Flask</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E4%BD%93%E7%B3%BB/" rel="tag">体系</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E5%90%8E%E7%BB%AD%E5%AD%A6%E4%B9%A0/" rel="tag">后续学习</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/" rel="tag">知识整理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag">读书笔记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E8%B5%84%E6%BA%90/" rel="tag">资源</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/en/tags/Flask/" style="font-size: 10px;">Flask</a> <a href="/en/tags/%E4%BD%93%E7%B3%BB/" style="font-size: 10px;">体系</a> <a href="/en/tags/%E5%90%8E%E7%BB%AD%E5%AD%A6%E4%B9%A0/" style="font-size: 20px;">后续学习</a> <a href="/en/tags/%E7%88%AC%E8%99%AB/" style="font-size: 10px;">爬虫</a> <a href="/en/tags/%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/" style="font-size: 10px;">知识整理</a> <a href="/en/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" style="font-size: 10px;">读书笔记</a> <a href="/en/tags/%E8%B5%84%E6%BA%90/" style="font-size: 10px;">资源</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2023/12/">十二月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2020/12/">十二月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2019/12/">十二月 2019</a><span class="archive-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/en/2023/12/25/Python%E7%88%AC%E8%99%AB%E7%9F%A5%E8%AF%86%E7%BB%93%E6%9E%84/">Python爬虫知识结构</a>
+          </li>
+        
+          <li>
+            <a href="/en/2020/12/25/Flask%E8%AF%AD%E6%B3%95%E9%87%8A%E4%B9%89/">Flask语法释义</a>
+          </li>
+        
+          <li>
+            <a href="/en/2020/12/25/cs_learning_path/">cs_learning_path</a>
+          </li>
+        
+          <li>
+            <a href="/en/2019/12/26/python%E7%9A%84%E7%89%B9%E6%AE%8A%E6%96%B9%E6%B3%95/">python的特殊方法</a>
+          </li>
+        
+          <li>
+            <a href="/en/2019/12/26/packtpub/">packtpub</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 CJ<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/en/" class="mobile-nav-link">Home</a>
+  
+    <a href="/en/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/en/fancybox/jquery.fancybox.css">
+
+  
+<script src="/en/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/en/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
