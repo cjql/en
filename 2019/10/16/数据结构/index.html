@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>数据结构概述——感受编程之美 | 千灵镜</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="数据结构体系">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构概述——感受编程之美">
+<meta property="og:url" content="https://cjql.github.io/en/2019/10/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.html">
+<meta property="og:site_name" content="千灵镜">
+<meta property="og:description" content="数据结构体系">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-8dd32c84e607dd12.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-aea8c6a097def30a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-4023d768ccc847ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/960">
+<meta property="article:published_time" content="2019-10-15T19:45:25.629Z">
+<meta property="article:modified_time" content="2019-10-15T19:45:09.553Z">
+<meta property="article:author" content="CJ">
+<meta property="article:tag" content="wiki">
+<meta property="article:tag" content="fix">
+<meta property="article:tag" content="数据结构">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/6908911-8dd32c84e607dd12.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+  
+    <link rel="alternate" href="/en/atom.xml" title="千灵镜" type="application/atom+xml">
+  
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/en/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/en/" id="logo">千灵镜</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/en/" id="subtitle">神驰八极，心游万仞</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/en/">Home</a>
+        
+          <a class="main-nav-link" href="/en/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/en/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://cjql.github.io/en"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-数据结构" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/en/2019/10/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="article-date">
+  <time datetime="2019-10-15T19:45:25.629Z" itemprop="datePublished">2019-10-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      数据结构概述——感受编程之美
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      <!-- Table of Contents -->
+      
+        <p>数据结构体系</p>
+<a id="more"></a>
+<h1 id="起源"><a href="#起源" class="headerlink" title="起源"></a>起源</h1><p>早期人们都把计算机理解为数值计算工具,就是感觉计算机当然是用来计算的,所以计算机解决问题,应该是先从具体问题中抽象出一个适当的数据模型,设计出个解此数据模型的算法,然后再编写程序,得到一个实际的软件。<br>可现实中,我们更多的不是解决数值计算的问题,而是需要一些更科学有效的手段(比如表、树和图等数据结构)的帮助,才能更好地处理问题。所以数据结构是门研究非数值计算的程序设计问题中的操作对象,以及它们之间的关系和操作等相关问题的学科<br>1968年,美国的高德纳( Donald E. Knuth)教授在其所写的《计算机程序设计艺术》第一卷《基本算法》中,较系统地阐述了数据的逻辑结构和存储结构及其操作,开创了数据结构的课程体系。同年,数据结构作为一门独立的课程,在计算机科学的学位课程中开始出现。也就是说,那之后计算机相关专业的学生开始接受《数据结构》的“折磨”—其实应该是享受才对。<br>之后,70年代初,出现了大型程序,软件也开始相对独立,结构程序设计成为程序设计方法学的主要内容,人们越来越重视“数据结构”,认为程序设计的实质是对确定的问题选择一种好的结构,加上设计一种好的算法。可见,数据结构在程序设计当中占据了重要的地位。</p>
+<h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><h2 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h2><p><img src="https://upload-images.jianshu.io/upload_images/6908911-8dd32c84e607dd12.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="https://upload-images.jianshu.io/upload_images/6908911-aea8c6a097def30a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>数据:是描述客观事物的符号,是计算机中可以操作的对象,是能被计算机识别,并输入给计算机处理的符号集合。</p>
+<h3 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h3><p>这里说的数据,其实就是符号,而且这些符号必须具备两个前提：可以输入到计算机中。能被计算机程序处理。</p>
+<h3 id="处理"><a href="#处理" class="headerlink" title="处理"></a>处理</h3><p>对于整型、实型等数值类型,可以进行数值计算。<br>对于字符数据类型,就需要进行非数值的处理。<br>而声音、图像、视频等其实是可以通过编码的手段变成字符数据来处理的。</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>数据类型:是指一组性质相同的值的集合及定义在此集合上的一些操作的总称。<br>数据类型是按照值的不同进行划分的。<br>在高级语言中,每个变量、常量和表达式都有各自的取值范围。类型就用来说明变量或表达式的取值范围和所能进行的操作。</p>
+<h3 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h3><p>数据类型：整型、实型等数值类型,字符（文字数据）及声音、图像、视频等非数值类型。</p>
+<h3 id="为什么有不同的数据类型"><a href="#为什么有不同的数据类型" class="headerlink" title="为什么有不同的数据类型"></a>为什么有不同的数据类型</h3><p>当年那些设计计算机语言的人,为什么会考虑到数据类型呢?</p>
+<h4 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h4><p>在计算机中,内存也不是无限大的。<br>计算整型数字的加减乘除运算,不需要开辟很大的内存空间。<br>于是计算机的研究者们就考虑,要对数据进行分类,分出来多种数据类型。<br>比如,在C语言中变量声明inta,b,这就意味着,在给变量a和b赋值时不能超出int的取值范围,变量a和b之间的运算只能是int类型所允许的运算。</p>
+<h4 id="底层语言与高级语言"><a href="#底层语言与高级语言" class="headerlink" title="底层语言与高级语言"></a>底层语言与高级语言</h4><p>因为不同的计算机有不同的硬件系统,这就要求程序语言最终通过编译器或解释器转换成底层语言,如汇编语言甚至是通过机器语言的数据类型来实现的。<br>实现1+2进行几次开关操作,这些操作是如何实现的。</p>
+<h4 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h4><p>无论什么计算机、什么计算机语言,大都会面临着如整数运算、实数运算、字符运算等操作,我们可以考虑把它们都抽象出来。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">抽象与抽象特性</span><br><span class="line">抽象：是指抽取出事物具有的普遍性的本质。它是抽出问题的特征而忽略非本质的细节,是对具体事物的一个概括。</span><br><span class="line">    抽象是一种思考问题的方式,它隐藏了繁杂的细节,只保留实现目标所必需的信息。</span><br><span class="line">    一个抽象数据类型到底需要哪些操作,这就只能由设计者根据实际需要（情况）来定。</span><br><span class="line">抽象数据类型( Abstract Data Type,ADT):是指一个数学模型及定义在该模型上的一组操作。</span><br><span class="line">    一个抽象数据类型定义了:一个数据对象、数据对象中各数据元素之间的关系及对数据元素的操作。</span><br><span class="line">    我们对已有的数据类型进行抽象,就有了抽象数据类型。</span><br><span class="line">    抽象数据类型不仅仅指那些已经定义并实现的数据类型,还可以是计算机编程者在设计软件程序时自己定义的数据类型。</span><br><span class="line">抽象数据类型体现了程序设计中问题分解、抽象和信息隐藏的特性。</span><br><span class="line">    把实际生活中的问题分解为多个规模小且容易处理的问题,</span><br><span class="line">    然后建立一个计算机能处理的数据模型,</span><br><span class="line">    并把每个功能模块的实现细节作为一个独立的单元,</span><br><span class="line">    从而使具体实现过程隐藏起来。</span><br><span class="line">抽象数据类型的定义仅取决于它的一组逻辑特性,而与其在计算机内部如何表示和实现无关。</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/6908911-4023d768ccc847ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/960" alt="数据抽象标准格式"></p>
+<h2 id="数据对象"><a href="#数据对象" class="headerlink" title="数据对象"></a>数据对象</h2><p>数据对象:是性质相同的数据元素的集合,是数据的子集。<br>实际应用中,在不产生混淆的情况下,我们都将数据对象简称为数据。<br>性质相同<br>指数据元素具有相同的数据项：数量和类型。<br>比如,还是刚才的例子,人都有姓名、生日、性别等相同的数据项。</p>
+<h3 id="数据元素（记录）"><a href="#数据元素（记录）" class="headerlink" title="数据元素（记录）"></a>数据元素（记录）</h3><p>数据元素：是组成数据的、有一定意义的基本单位,在计算机中通常作为整体处理。也被称为记录。<br>讨论问题时,数据元素才是数据结构中建立数据模型的着眼点。</p>
+<h4 id="数据项"><a href="#数据项" class="headerlink" title="数据项"></a>数据项</h4><p>数据项:一个数据元素可以由若干个数据项组成。姓名、年龄、性别等数据项,具体有哪些数据项,要视你做的系统来决定。<br>数据项是数据不可分割的最小单位。<br>数据项是数据的最小单位。<br>把数据项定义为最小单位,是有助于更好地解决问题。</p>
+<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><p>结构是指各个组成部分相互搭配和排列的方式。在现实世界中,不同数据元素之间不是独立的,而是存在特定的关系,我们将这些关系称为结构。</p>
+<h3 id="数据结构-1"><a href="#数据结构-1" class="headerlink" title="数据结构"></a>数据结构</h3><p>关系、结构、集合、组织形式。<br>数据结构：是相互之间存在一种或多种特定关系的数据元素的集合。<br>在计算机中,数据元素并不是孤立、杂乱无序的,而是具有内在联系的数据集合。<br>数据元素之间存在的一种或多种特定关系,也就是数据的组织形式。<br>为编写出一个“好”的程序,必须分析待处理对象的特性及各处理对象之间存在的关系。</p>
+<h4 id="逻辑结构"><a href="#逻辑结构" class="headerlink" title="逻辑结构"></a>逻辑结构</h4><p>逻辑结构：是指数据对象中数据元素之间的相互关系。</p>
+<ul>
+<li>集合结构：集合结构中的数据元素除了同属于一个集合外,它们之间没有其他关系。各个数据元素是“平等”的,它们的共同属性是“同属于一个集合”。数据结构中的集合关系就类似于数学中的集合。</li>
+<li>线性结构：数据元素之间是一对一的关系。如不转车的地铁站。</li>
+<li>树形结构：数据元素之间是一对多的关系。</li>
+<li>图形结构：数据元素之间是多对多的关系。<h4 id="物理结构"><a href="#物理结构" class="headerlink" title="物理结构"></a>物理结构</h4>物理结构：是指数据的逻辑结构在计算机中的存储形式数据是数据元素的集合。如何把数据元素存储到计算机的存储器中。如何存储数据元素之间的逻辑关系,是实现物理结构的重点和难点。<br>存储器主要是针对内存而言的,像硬盘、软盘、光盘等外部存储器的数据组织通常用文件结构来描述。</li>
+<li>顺序存储结构<blockquote>
+<p>顺序存储结构:是把数据元素存放在地址连续的存储单元里,其数据间的逻辑关系和物理关系是一致的。<br>说白了,就是排队占位。大家都按顺序排好,每个人占一小段空间,大家谁也别插谁的队。数组就是这样的顺序存储结构。<br>当你告诉计算机,你要建立一个有9个整型数据的数组时,计算机就在内存中找了片空地,按照一个整型所占位置的大小乘以9,开辟一段连续的空间,于是第一个数组数据就放在第一个位置,第二个数据放在第二个,这样依次摆放。  </p>
+</blockquote>
+</li>
+<li>链式存储结构<blockquote>
+<p>插队，添加，去掉，整个结构时刻都处于变化中。顺序存储是不科学的。<br>链式存储结构：是把数据元素存放在任意的存储单元里，这组存储单元可以是连续的，也可以是不连续的。<br>数据元素的存储关系并不能反映其逻辑关系，因此需要用一个指针存放数据元素的地址，这样通过地址就可以找到相关联数据元素的位置。<br>链式存储就灵活多了,数据存在哪里不重要,只要有一个指针存放了相应的地址就能找到它了。</p>
+</blockquote>
+<h2 id="示意图"><a href="#示意图" class="headerlink" title="示意图"></a>示意图</h2>我们在用示意图表示数据的逻辑结构时,要注意两点：<br>节点：将每一个数据元素看做一个结点,用圆圈表示。<br>连线：元素之间的逻辑关系用结点之间的连线表示,如果这个关系是有方向的,那么用带箭头的连线表示。</li>
+</ul>
+<h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><p>各个计算机,不管是大型机、小型机、PC、平板电脑、PDA,甚至智能手机</p>
+<h2 id="数据结构-2"><a href="#数据结构-2" class="headerlink" title="数据结构"></a>数据结构</h2><p>按照视点的不同,我们把数据结构分为：逻辑结构和物理结构。<br>逻辑结构是面向问题的,而物理结构就是面向计算机的,其基本的目标就是将数据及其逻辑关系存储到计算机的内存中。</p>
+<h3 id="逻辑结构-1"><a href="#逻辑结构-1" class="headerlink" title="逻辑结构"></a>逻辑结构</h3><p>逻辑结构分为：集合结构、线性结构、树形结构、图形结构。<br>逻辑结构是针对具体问题的,是为了解决某个问题，在对问题理解的基础上,选择一个合适的数据结构表示数据元素之间的逻辑关系。</p>
+<h3 id="物理结构（存储结构）"><a href="#物理结构（存储结构）" class="headerlink" title="物理结构（存储结构）"></a>物理结构（存储结构）</h3><p>数据元素的存储结构形式有两种:顺序存储和链式存储。</p>
+<h2 id="数据类型-1"><a href="#数据类型-1" class="headerlink" title="数据类型"></a>数据类型</h2><p>在C语言中,按照取值的不同,数据类型可以分为两类。<br>原子类型:是不可以再分解的基本类型,包括整型、实型、字符型等。<br>结构类型:由若干个类型组合而成,是可以再分解的。例如,整型数组是由若干整型数据组成的。</p>
+<h1 id="同名"><a href="#同名" class="headerlink" title="同名"></a>同名</h1><p>物理结构、存储结构</p>
+<h1 id="最"><a href="#最" class="headerlink" title="最"></a>最</h1><p>最需要关注的问题是逻辑结构。<br>数据的存储结构应正确反映数据元素之间的逻辑关系,这才是最为关键的。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://cjql.github.io/en/2019/10/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" data-id="ck4nw7igh003ye0vx7zitcea0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/en/tags/fix/" rel="tag">fix</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/en/tags/wiki/" rel="tag">wiki</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/en/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/en/2019/10/16/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%A6%82%E8%A7%88/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          数据结构概览
+        
+      </div>
+    </a>
+  
+  
+    <a href="/en/2019/10/16/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%9A%E5%9B%BE%E8%A7%A3HTTP/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">学习笔记：图解HTTP</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/Flask/" rel="tag">Flask</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/GUI/" rel="tag">GUI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/ML/" rel="tag">ML</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/NLP/" rel="tag">NLP</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/NLTK/" rel="tag">NLTK</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/code/" rel="tag">code</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/fix/" rel="tag">fix</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/github/" rel="tag">github</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/jupyter/" rel="tag">jupyter</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/mind/" rel="tag">mind</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/mysql/" rel="tag">mysql</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/packtpub/" rel="tag">packtpub</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/python/" rel="tag">python</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/python%E5%9F%BA%E7%A1%80/" rel="tag">python基础</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/python%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" rel="tag">python数据类型</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/todo/" rel="tag">todo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/web/" rel="tag">web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/wiki/" rel="tag">wiki</a><span class="tag-list-count">12</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A8/" rel="tag">代码大全</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E4%BD%93%E7%B3%BB/" rel="tag">体系</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E5%90%8E%E7%BB%AD%E5%AD%A6%E4%B9%A0/" rel="tag">后续学习</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" rel="tag">基本数据类型</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E6%80%9D%E8%80%83/" rel="tag">思考</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" rel="tag">数据类型</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" rel="tag">数据结构</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E6%96%87%E6%9C%AC%E5%88%86%E6%9E%90/" rel="tag">文本分析</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E6%A0%B8%E5%AF%B9%E8%A1%A8/" rel="tag">核对表</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E7%88%AC%E8%99%AB/" rel="tag">爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E7%9F%A5%E8%AF%86%E5%9C%B0%E5%9B%BE/" rel="tag">知识地图</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/" rel="tag">知识整理</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E7%A9%BA%E9%97%B2%E6%89%A9%E5%B1%95/" rel="tag">空闲扩展</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/" rel="tag">笔记整理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/" rel="tag">编程基础</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" rel="tag">计算机基础</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="tag">读书笔记</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E8%B5%84%E6%BA%90/" rel="tag">资源</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E8%BD%AC%E8%BD%BD/" rel="tag">转载</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/en/tags/%E9%BB%91%E5%AE%A2%E6%94%BB%E9%98%B2/" rel="tag">黑客攻防</a><span class="tag-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/en/tags/Flask/" style="font-size: 10px;">Flask</a> <a href="/en/tags/GUI/" style="font-size: 10px;">GUI</a> <a href="/en/tags/ML/" style="font-size: 13.33px;">ML</a> <a href="/en/tags/NLP/" style="font-size: 10px;">NLP</a> <a href="/en/tags/NLTK/" style="font-size: 10px;">NLTK</a> <a href="/en/tags/code/" style="font-size: 10px;">code</a> <a href="/en/tags/fix/" style="font-size: 18.33px;">fix</a> <a href="/en/tags/github/" style="font-size: 10px;">github</a> <a href="/en/tags/jupyter/" style="font-size: 10px;">jupyter</a> <a href="/en/tags/mind/" style="font-size: 16.67px;">mind</a> <a href="/en/tags/mysql/" style="font-size: 10px;">mysql</a> <a href="/en/tags/packtpub/" style="font-size: 10px;">packtpub</a> <a href="/en/tags/python/" style="font-size: 13.33px;">python</a> <a href="/en/tags/python%E5%9F%BA%E7%A1%80/" style="font-size: 15px;">python基础</a> <a href="/en/tags/python%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" style="font-size: 11.67px;">python数据类型</a> <a href="/en/tags/todo/" style="font-size: 11.67px;">todo</a> <a href="/en/tags/web/" style="font-size: 10px;">web</a> <a href="/en/tags/wiki/" style="font-size: 20px;">wiki</a> <a href="/en/tags/%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A8/" style="font-size: 10px;">代码大全</a> <a href="/en/tags/%E4%BD%93%E7%B3%BB/" style="font-size: 10px;">体系</a> <a href="/en/tags/%E5%90%8E%E7%BB%AD%E5%AD%A6%E4%B9%A0/" style="font-size: 11.67px;">后续学习</a> <a href="/en/tags/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" style="font-size: 10px;">基本数据类型</a> <a href="/en/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 11.67px;">学习笔记</a> <a href="/en/tags/%E6%80%9D%E8%80%83/" style="font-size: 10px;">思考</a> <a href="/en/tags/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" style="font-size: 11.67px;">数据类型</a> <a href="/en/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" style="font-size: 11.67px;">数据结构</a> <a href="/en/tags/%E6%96%87%E6%9C%AC%E5%88%86%E6%9E%90/" style="font-size: 10px;">文本分析</a> <a href="/en/tags/%E6%A0%B8%E5%AF%B9%E8%A1%A8/" style="font-size: 10px;">核对表</a> <a href="/en/tags/%E7%88%AC%E8%99%AB/" style="font-size: 10px;">爬虫</a> <a href="/en/tags/%E7%9F%A5%E8%AF%86%E5%9C%B0%E5%9B%BE/" style="font-size: 10px;">知识地图</a> <a href="/en/tags/%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/" style="font-size: 11.67px;">知识整理</a> <a href="/en/tags/%E7%A9%BA%E9%97%B2%E6%89%A9%E5%B1%95/" style="font-size: 10px;">空闲扩展</a> <a href="/en/tags/%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86/" style="font-size: 10px;">笔记整理</a> <a href="/en/tags/%E7%BC%96%E7%A8%8B%E5%9F%BA%E7%A1%80/" style="font-size: 10px;">编程基础</a> <a href="/en/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" style="font-size: 10px;">计算机基础</a> <a href="/en/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" style="font-size: 11.67px;">读书笔记</a> <a href="/en/tags/%E8%B5%84%E6%BA%90/" style="font-size: 10px;">资源</a> <a href="/en/tags/%E8%BD%AC%E8%BD%BD/" style="font-size: 10px;">转载</a> <a href="/en/tags/%E9%BB%91%E5%AE%A2%E6%94%BB%E9%98%B2/" style="font-size: 13.33px;">黑客攻防</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2023/12/">十二月 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2020/12/">十二月 2020</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2019/12/">十二月 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2019/11/">十一月 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2019/10/">十月 2019</a><span class="archive-list-count">32</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/1970/01/">一月 1970</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/en/2023/12/25/Python%E7%88%AC%E8%99%AB%E7%9F%A5%E8%AF%86%E7%BB%93%E6%9E%84/">Python爬虫知识结构</a>
+          </li>
+        
+          <li>
+            <a href="/en/2020/12/25/Flask%E8%AF%AD%E6%B3%95%E9%87%8A%E4%B9%89/">Flask语法释义</a>
+          </li>
+        
+          <li>
+            <a href="/en/2020/12/25/cs_learning_path/">cs_learning_path</a>
+          </li>
+        
+          <li>
+            <a href="/en/2019/12/26/python%E7%9A%84%E7%89%B9%E6%AE%8A%E6%96%B9%E6%B3%95/">python的特殊方法</a>
+          </li>
+        
+          <li>
+            <a href="/en/2019/12/26/packtpub/">packtpub</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 CJ<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  <div class="goBack" onclick="window.scrollTo('0','0')"></div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/en/" class="mobile-nav-link">Home</a>
+  
+    <a href="/en/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/en/fancybox/jquery.fancybox.css">
+
+  
+<script src="/en/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/en/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
