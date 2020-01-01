@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo | 千灵镜</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="0.1. 说明记录本站所采用的主题的改动历史。学习和记录hexo的相关配置和操作。 0.2. 小记主博客用的是Yelee主题，修改了UI，使其比较符合自己的口味。子博客用的是landscape主题，修改了bannar、浮悬导航及部分其他UI，增加了目录和到顶部按钮。抽离出自定义子博客模块。自此，每个新子博客用一条命令，三五个动作就可以部署成功了，扩展性大幅度增强。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://cjql.github.io/en/2018/12/25/Hexo/index.html">
+<meta property="og:site_name" content="千灵镜">
+<meta property="og:description" content="0.1. 说明记录本站所采用的主题的改动历史。学习和记录hexo的相关配置和操作。 0.2. 小记主博客用的是Yelee主题，修改了UI，使其比较符合自己的口味。子博客用的是landscape主题，修改了bannar、浮悬导航及部分其他UI，增加了目录和到顶部按钮。抽离出自定义子博客模块。自此，每个新子博客用一条命令，三五个动作就可以部署成功了，扩展性大幅度增强。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7691672-10c91cc7e9e1f42c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/7691672-6de8aa1b0c8c5989.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1044/format/webp">
+<meta property="article:published_time" content="2018-12-24T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-01-01T08:13:08.219Z">
+<meta property="article:author" content="CJ">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/7691672-10c91cc7e9e1f42c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp">
+  
+    <link rel="alternate" href="/en/atom.xml" title="千灵镜" type="application/atom+xml">
+  
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/en/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/en/" id="logo">千灵镜</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/en/" id="subtitle">神驰八极，心游万仞</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/en/">Home</a>
+        
+          <a class="main-nav-link" href="/en/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/en/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://cjql.github.io/en"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/en/2018/12/25/Hexo/" class="article-date">
+  <time datetime="2018-12-24T16:00:00.000Z" itemprop="datePublished">2018-12-25</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>►<a class="article-category-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Web/">Web</a>►<a class="article-category-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Web/Hexo/">Hexo</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      <!-- Table of Contents -->
+      
+        <h2 id="0-1-说明"><a href="#0-1-说明" class="headerlink" title="0.1. 说明"></a>0.1. 说明</h2><p>记录本站所采用的主题的改动历史。学习和记录hexo的相关配置和操作。</p>
+<h2 id="0-2-小记"><a href="#0-2-小记" class="headerlink" title="0.2. 小记"></a>0.2. 小记</h2><p>主博客用的是Yelee主题，修改了UI，使其比较符合自己的口味。<a href="https://cjql.github.io/en">子博客</a>用的是landscape主题，修改了bannar、浮悬导航及部分其他UI，增加了目录和到顶部按钮。抽离出自定义子博客模块。自此，每个新子博客用一条命令，三五个动作就可以部署成功了，扩展性大幅度增强。</p>
+<a id="more"></a>
+<h1 id="1-todo"><a href="#1-todo" class="headerlink" title="1. todo"></a>1. todo</h1><p><a href="https://github.com/howiefh/hexo-theme-landscape-f/blob/master/layout/_partial/after-footer.ejs#L33" target="_blank" rel="noopener">https://github.com/howiefh/hexo-theme-landscape-f/blob/master/layout/_partial/after-footer.ejs#L33</a><br><a href="https://github.com/howiefh/hexo-theme-landscape-f/blob/master/layout/_partial/sidebar.ejs" target="_blank" rel="noopener">https://github.com/howiefh/hexo-theme-landscape-f/blob/master/layout/_partial/sidebar.ejs</a><br><a href="https://github.com/howiefh/hexo-theme-landscape-f/blob/master/layout/_partial/article.ejs" target="_blank" rel="noopener">https://github.com/howiefh/hexo-theme-landscape-f/blob/master/layout/_partial/article.ejs</a><br><a href="https://github.com/howiefh/hexo-theme-landscape-f/blob/master/source/css/_variables.styl" target="_blank" rel="noopener">https://github.com/howiefh/hexo-theme-landscape-f/blob/master/source/css/_variables.styl</a><br><a href="https://github.com/howiefh/hexo-theme-landscape-f/blob/master/source/css/style.styl" target="_blank" rel="noopener">https://github.com/howiefh/hexo-theme-landscape-f/blob/master/source/css/style.styl</a><br><a href="https://github.com/howiefh/hexo-theme-landscape-f/blob/master/source/css/_partial/bottom-btn.styl" target="_blank" rel="noopener">https://github.com/howiefh/hexo-theme-landscape-f/blob/master/source/css/_partial/bottom-btn.styl</a><br><a href="https://github.com/howiefh/hexo-theme-landscape-f/blob/master/source/css/_partial/toc.styl" target="_blank" rel="noopener">https://github.com/howiefh/hexo-theme-landscape-f/blob/master/source/css/_partial/toc.styl</a><br><a href="http://howiefh.github.io/archives/" target="_blank" rel="noopener">http://howiefh.github.io/archives/</a><br><a href="https://hexo.io/docs/asset-folders.html#Post-Asset-Folder" target="_blank" rel="noopener">https://hexo.io/docs/asset-folders.html#Post-Asset-Folder</a><br><a href="https://zalando-incubator.github.io/hexo-theme-doc/" target="_blank" rel="noopener">https://zalando-incubator.github.io/hexo-theme-doc/</a><br><a href="https://chorer.github.io/" target="_blank" rel="noopener">https://chorer.github.io/</a> 暂时不用<br><a href="https://raytaylorlin.github.io/" target="_blank" rel="noopener">https://raytaylorlin.github.io/</a><br><a href="https://github.com/MOxFIVE/Markdown-Archives-Backup/blame/master/_posts/2015-08-20.blog-building.md" target="_blank" rel="noopener">https://github.com/MOxFIVE/Markdown-Archives-Backup/blame/master/_posts/2015-08-20.blog-building.md</a><br><a href="https://zhuqingguang.github.io/2017/08/16/adapting-two-layout/" target="_blank" rel="noopener">https://zhuqingguang.github.io/2017/08/16/adapting-two-layout/</a><br>toc：<br><a href="https://orianna-zzo.github.io/sci-tech/2018-08/blog%E5%85%BB%E6%88%90%E8%AE%B013-%E5%A2%9E%E5%8A%A0%E4%B8%80%E4%B8%AAtoc%E4%BE%A7%E8%BE%B9%E6%A0%8F/" target="_blank" rel="noopener">https://orianna-zzo.github.io/sci-tech/2018-08/blog%E5%85%BB%E6%88%90%E8%AE%B013-%E5%A2%9E%E5%8A%A0%E4%B8%80%E4%B8%AAtoc%E4%BE%A7%E8%BE%B9%E6%A0%8F/</a><br><a href="https://www.runoob.com/bootstrap/bootstrap-scrollspy-plugin.html" target="_blank" rel="noopener">https://www.runoob.com/bootstrap/bootstrap-scrollspy-plugin.html</a><br><a href="https://unnamed42.github.io/2016-09-10-Hexo%E6%8A%98%E8%85%BE%E7%AC%94%E8%AE%B0.html" target="_blank" rel="noopener">https://unnamed42.github.io/2016-09-10-Hexo%E6%8A%98%E8%85%BE%E7%AC%94%E8%AE%B0.html</a></p>
+<h1 id="2-历次修改"><a href="#2-历次修改" class="headerlink" title="2. 历次修改"></a>2. 历次修改</h1><h2 id="2-1-扩展自定义主题及子目录博客快速部署"><a href="#2-1-扩展自定义主题及子目录博客快速部署" class="headerlink" title="2.1. 扩展自定义主题及子目录博客快速部署"></a>2.1. 扩展自定义主题及子目录博客快速部署</h2><ol>
+<li>打开git，在git中输入以下命令<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init eg&amp;&amp; <span class="built_in">cd</span> eg &amp;&amp;(git <span class="built_in">clone</span> https://github.com/cjql/hexosub;npm install hexo-deployer-git --save)</span><br></pre></td></tr></table></figure></li>
+<li>将<code>hexosub文件夹里的_config.yml文件、themes文件夹、scaffolds文件夹</code>复制到<code>eg文件夹</code>并替换</li>
+<li>删除hexosub文件夹</li>
+<li>打开eg/_config.yml，在里面找到下面几行：<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">url:</span> <span class="string">http://yoursite.com/eg</span></span><br><span class="line"><span class="attr">root:</span> <span class="string">/eg/</span></span><br><span class="line"></span><br><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">'git'</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">https://github.com/cjql/eg</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+将eg替换为你的子目录对应的GitHub上的仓库的名称。<h2 id="2-2-全局添加到顶部按钮"><a href="#2-2-全局添加到顶部按钮" class="headerlink" title="2.2. 全局添加到顶部按钮"></a>2.2. 全局添加到顶部按钮</h2><a href="http://howiefh.github.io/2014/02/07/hexo-note/" target="_blank" rel="noopener">http://howiefh.github.io/2014/02/07/hexo-note/</a><br><a href="https://www.iconfont.cn/search/index?q=%E7%AE%AD%E5%A4%B4%20%E4%B8%8A" target="_blank" rel="noopener">https://www.iconfont.cn/search/index?q=%E7%AE%AD%E5%A4%B4%20%E4%B8%8A</a><h2 id="2-3-在子目录里部署GitHub博客"><a href="#2-3-在子目录里部署GitHub博客" class="headerlink" title="2.3. 在子目录里部署GitHub博客"></a>2.3. 在子目录里部署GitHub博客</h2><a href="https://hexo.io/docs/github-pages#Project-page" target="_blank" rel="noopener">https://hexo.io/docs/github-pages#Project-page</a><blockquote>
+<p>Step1 在GitHub中准备仓库。</p>
+</blockquote>
+</li>
+<li>Create a new repository <code>&lt;reponame&gt;</code></li>
+<li>settings of reponame </li>
+<li>GitHub Pages.Source.master branch</li>
+</ol>
+<blockquote>
+<p>step2 获取博客环境文件夹</p>
+</blockquote>
+<ul>
+<li>方案一 直接复制已部署的博客文件夹，删除_post里面的所有文件。</li>
+<li>方案二 重头再来。在bash里依次输入下面几行命令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init my-blog</span><br><span class="line"><span class="built_in">cd</span> my-blog</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>step3 修改子目录配置<br><img src="https://upload-images.jianshu.io/upload_images/7691672-10c91cc7e9e1f42c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1200/format/webp" alt=""><br><img src="https://upload-images.jianshu.io/upload_images/7691672-6de8aa1b0c8c5989.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1044/format/webp" alt=""></p>
+</blockquote>
+</li>
+</ul>
+<p>参考连接：</p>
+<ol>
+<li><a href="https://www.jianshu.com/p/18356b0a7494" target="_blank" rel="noopener">https://www.jianshu.com/p/18356b0a7494</a><h2 id="2-4-迁移"><a href="#2-4-迁移" class="headerlink" title="2.4. 迁移"></a>2.4. 迁移</h2></li>
+<li>检查<a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">安装</a><br><code>git version
+node -v
+hexo -v</code><br>若是hexo未安装：建io文件夹，进入io并在其下gitbash’npm install -g hexo-cli’。【io是要部署blog的文件夹，自己随意命名即可，保持一致就好】</li>
+<li><code>hexo init</code></li>
+<li>将 <a href="https://github.com/cjql/blog" target="_blank" rel="noopener">https://github.com/cjql/blog</a> 克隆并复制覆盖到io文件夹</li>
+<li><code>npm install hexo-deployer-git --save</code></li>
+<li><code>npm install --save hexo-generator-search</code></li>
+<li>在io/source/_posts中新增文章</li>
+<li><code>hexo g</code></li>
+<li><code>hexo d</code></li>
+<li><code>hexo s</code><h1 id="3-参考资料"><a href="#3-参考资料" class="headerlink" title="3. 参考资料"></a>3. 参考资料</h1></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>主体</th>
+<th>网址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>hexo</td>
+<td><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> <a href="https://hexo.io/docs/" target="_blank" rel="noopener">Documentation</a> <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a> <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a> <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a> <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a><br> <a href="https://xuanwo.io/2014/08/14/hexo-usual-problem/" target="_blank" rel="noopener">常见问题</a>  <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">Troubleshooting</a>  <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a></td>
+</tr>
+<tr>
+<td>moxfive</td>
+<td><a href="http://moxfive.xyz/2015/08/20/blog-building/" target="_blank" rel="noopener">建站日志</a> <a href="http://moxfive.xyz/" target="_blank" rel="noopener">个人网站</a> <a href="https://github.com/MOxFIVE" target="_blank" rel="noopener">github</a></td>
+</tr>
+<tr>
+<td>颜色</td>
+<td><a href="http://www.w3school.com.cn/cssref/css_colorsfull.asp" target="_blank" rel="noopener">一览</a> <a href="https://www.sioe.cn/yingyong/yanse-rgb-16/" target="_blank" rel="noopener">转换</a></td>
+</tr>
+<tr>
+<td>花案</td>
+<td><a href="http://www.haowangming.cc/teshufuhao/" target="_blank" rel="noopener">特殊符号</a></td>
+</tr>
+</tbody></table>
+<h1 id="4-遗留"><a href="#4-遗留" class="headerlink" title="4. 遗留"></a>4. 遗留</h1><h2 id="4-1-加油"><a href="#4-1-加油" class="headerlink" title="4.1. 加油"></a>4.1. 加油</h2><p>看配色方案：准备冷暖两套六级渐变色<br>首页如何列表显示<br>文章宽度如何调宽<br>如何调整文章显示顺序<br>top和按更新时间显示<br>如何加入分类</p>
+<h2 id="4-2-思考"><a href="#4-2-思考" class="headerlink" title="4.2. 思考"></a>4.2. 思考</h2><p>如何为姐姐快速部署一个呢？</p>
+<blockquote>
+<p>所需素材：六张背景图，一张图标，日志文件</p>
+</blockquote>
+<h1 id="5-年12月12日"><a href="#5-年12月12日" class="headerlink" title="5. 年12月12日"></a>5. 年12月12日</h1><h2 id="5-1-查看文章更新"><a href="#5-1-查看文章更新" class="headerlink" title="5.1. 查看文章更新"></a>5.1. 查看文章更新</h2><p><a href="https://github.com/cjql/blog/edit/master/themes/iyelee/layout/_partial/post/copyright.ejs" target="_blank" rel="noopener">themes\iyelee\layout_partial\post\copyright.ejs</a><br>非常值得细看，参考<a href="http://moxfive.xyz/2016/01/10/hexo-post-version-control/" target="_blank" rel="noopener">moxfive</a></p>
+<h2 id="5-2-头像和ico"><a href="#5-2-头像和ico" class="headerlink" title="5.2. 头像和ico"></a>5.2. 头像和ico</h2><p><a href="https://github.com/cjql/blog/tree/master/themes/iyelee/source/resources" target="_blank" rel="noopener">themes\iyelee\source\resources</a></p>
+<h2 id="5-3-设置背景图案"><a href="#5-3-设置背景图案" class="headerlink" title="5.3. 设置背景图案"></a>5.3. 设置背景图案</h2><p><a href="https://github.com/cjql/blog/tree/master/themes/iyelee/source/background" target="_blank" rel="noopener">themes\iyelee\source\background</a></p>
+<h2 id="5-4-社区链接图标"><a href="#5-4-社区链接图标" class="headerlink" title="5.4. 社区链接图标"></a>5.4. 社区链接图标</h2><p><a href="https://github.com/cjql/blog/tree/master/themes/iyelee/source/img" target="_blank" rel="noopener">themes\iyelee\source\img</a></p>
+<h2 id="5-5-修改头像背景"><a href="#5-5-修改头像背景" class="headerlink" title="5.5. 修改头像背景"></a>5.5. 修改头像背景</h2><p><a href="https://github.com/cjql/blog/edit/master/themes/iyelee/source/css/_partial/main.styl" target="_blank" rel="noopener">themes\iyelee\source\css_partial\main.styl</a></p>
+<h2 id="5-6-标题字体颜色"><a href="#5-6-标题字体颜色" class="headerlink" title="5.6. 标题字体颜色"></a>5.6. 标题字体颜色</h2><p><a href="https://github.com/cjql/blog/edit/master/themes/iyelee/source/css/_partial/customise/heading.styl" target="_blank" rel="noopener">themes\iyelee\source\css_partial\customise\heading.styl</a><br>似乎会覆盖themes\iyelee\source\css_extend.styl文件</p>
+<h2 id="5-7-标题字体大小"><a href="#5-7-标题字体大小" class="headerlink" title="5.7. 标题字体大小"></a>5.7. 标题字体大小</h2><p><a href="https://github.com/cjql/blog/edit/master/themes/iyelee/source/css/_extend.styl" target="_blank" rel="noopener">themes\iyelee\source\css_extend.styl</a></p>
+<h2 id="5-8-主题配置文件"><a href="#5-8-主题配置文件" class="headerlink" title="5.8. 主题配置文件"></a>5.8. 主题配置文件</h2><p><a href="https://github.com/cjql/blog/edit/master/themes/iyelee/_config.yml" target="_blank" rel="noopener">blog\themes\iyelee_config.yml</a></p>
+<h2 id="5-9-站点配置文件"><a href="#5-9-站点配置文件" class="headerlink" title="5.9. 站点配置文件"></a>5.9. 站点配置文件</h2><p><a href="https://github.com/cjql/blog/edit/master/_config.yml" target="_blank" rel="noopener">blog_config.yml</a><br>2018年12月10日<br>发现一个 bug ，hexo 的 post 里面不能建立一个名为 tags 的文章。</p>
+<h1 id="6-排错"><a href="#6-排错" class="headerlink" title="6. 排错"></a>6. 排错</h1><blockquote>
+<ul>
+<li>检查_config.yml的空格</li>
+</ul>
+</blockquote>
+<h2 id="6-1-Template-render-error"><a href="#6-1-Template-render-error" class="headerlink" title="6.1. Template render error"></a>6.1. Template render error</h2><p><a href="https://hexo.io/docs/troubleshooting#Escape-Contents" target="_blank" rel="noopener">https://hexo.io/docs/troubleshooting#Escape-Contents</a></p>
+<h1 id="7-设计相关书单"><a href="#7-设计相关书单" class="headerlink" title="7. 设计相关书单"></a>7. 设计相关书单</h1><table>
+<thead>
+<tr>
+<th>ISBN</th>
+<th>Date</th>
+<th>pages</th>
+<th>price</th>
+<th>author</th>
+<th>title</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>9787533543341</td>
+<td>2013-8-1</td>
+<td>140</td>
+<td>CNY 29.80</td>
+<td>理想·宅</td>
+<td><a href="https://book.douban.com/subject/30197610/" target="_blank" rel="noopener">创意家居客厅造价与材料注释系列</a></td>
+</tr>
+<tr>
+<td>9787533543372</td>
+<td>2013-8-1</td>
+<td>140</td>
+<td>CNY 29.80</td>
+<td>理想·宅</td>
+<td><a href="https://book.douban.com/subject/30197611/" target="_blank" rel="noopener">创意家居客厅造价与材料注释系列</a></td>
+</tr>
+<tr>
+<td>9787533543358</td>
+<td>2013-7-1</td>
+<td>140</td>
+<td>CNY 29.80</td>
+<td>理想·宅</td>
+<td><a href="https://book.douban.com/subject/30197612/" target="_blank" rel="noopener">创意家居客厅造价与材料注释系列</a></td>
+</tr>
+<tr>
+<td>9787533543365</td>
+<td>2013-8-1</td>
+<td>140</td>
+<td>CNY 29.80</td>
+<td>理想·宅</td>
+<td><a href="https://book.douban.com/subject/30197613/" target="_blank" rel="noopener">创意家居客厅造价与材料注释系列</a></td>
+</tr>
+<tr>
+<td>9780521128414</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="https://book.douban.com/subject/30197614/" target="_blank" rel="noopener">reading William Blake</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="https://book.douban.com/subject/30197615/" target="_blank" rel="noopener"></a></td>
+</tr>
+<tr>
+<td>9787533543310</td>
+<td>2013-9-1</td>
+<td>140</td>
+<td>CNY 23.00</td>
+<td>王双忠</td>
+<td><a href="https://book.douban.com/subject/30197616/" target="_blank" rel="noopener">运动健身丛书</a></td>
+</tr>
+<tr>
+<td>9787533552862</td>
+<td>2017-8-1</td>
+<td>30</td>
+<td>CNY 32.00</td>
+<td>哈皮童年</td>
+<td><a href="https://book.douban.com/subject/30197617/" target="_blank" rel="noopener">中华传统经典故事绘本</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="https://book.douban.com/subject/30197618/" target="_blank" rel="noopener"></a></td>
+</tr>
+<tr>
+<td>9781442496910</td>
+<td>2014</td>
+<td></td>
+<td></td>
+<td>Jordan Quinn</td>
+<td><a href="https://book.douban.com/subject/30197619/" target="_blank" rel="noopener">The Kindom of Wrenly 1</a></td>
+</tr>
+<tr>
+<td># 8. 官方指引</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="8-1-Quick-Start"><a href="#8-1-Quick-Start" class="headerlink" title="8.1. Quick Start"></a>8.1. Quick Start</h2><h3 id="8-1-1-Create-a-new-post"><a href="#8-1-1-Create-a-new-post" class="headerlink" title="8.1.1. Create a new post"></a>8.1.1. Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="8-1-2-Run-server"><a href="#8-1-2-Run-server" class="headerlink" title="8.1.2. Run server"></a>8.1.2. Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="8-1-3-Generate-static-files"><a href="#8-1-3-Generate-static-files" class="headerlink" title="8.1.3. Generate static files"></a>8.1.3. Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="8-1-4-Deploy-to-remote-sites"><a href="#8-1-4-Deploy-to-remote-sites" class="headerlink" title="8.1.4. Deploy to remote sites"></a>8.1.4. Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://cjql.github.io/en/2018/12/25/Hexo/" data-id="ck4vcadfb000tb0vx3rf3dh84" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/en/2018/12/25/Flask%E8%AF%AD%E6%B3%95%E9%87%8A%E4%B9%89/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Flask语法释义
+        
+      </div>
+    </a>
+  
+  
+    <a href="/en/2017/12/25/%E7%88%AC%E8%99%AB%E7%9F%A5%E8%AF%86%E7%BB%93%E6%9E%84/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">爬虫知识结构</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/en/categories/00%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">00学习方法</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/00%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/00%E5%85%A8%E6%99%AF/">00全景</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/00%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Web/">Web</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Web/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Web/Python/">Python</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Web/Python/Flask/">Flask</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%9F%BA%E7%A1%80/">基础</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%9F%BA%E7%A1%80/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%B7%A5%E5%85%B7/">工具</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%88%AC%E8%99%AB/">爬虫</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%88%AC%E8%99%AB/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%AE%97%E6%B3%95/">算法</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E9%BB%91%E5%AE%A2/">黑客</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%B5%84%E6%BA%90/">资源</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2100/12/">十二月 2100</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2099/12/">十二月 2099</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2018/12/">十二月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2017/12/">十二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2016/12/">十二月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2011/12/">十二月 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2006/12/">十二月 2006</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/1980/12/">十二月 1980</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/1979/12/">十二月 1979</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/en/2100/12/31/%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86%E6%9C%AF%E8%AF%AD%E8%A1%A8/">知识整理术语表</a>
+          </li>
+        
+          <li>
+            <a href="/en/2100/12/12/cs_learning_path/">cs_learning_path</a>
+          </li>
+        
+          <li>
+            <a href="/en/2100/12/12/%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A8/">代码大全</a>
+          </li>
+        
+          <li>
+            <a href="/en/2099/12/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+          </li>
+        
+          <li>
+            <a href="/en/2018/12/25/Flask%E8%AF%AD%E6%B3%95%E9%87%8A%E4%B9%89/">Flask语法释义</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 CJ<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  <div class="goBack" onclick="window.scrollTo('0','0')"></div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/en/" class="mobile-nav-link">Home</a>
+  
+    <a href="/en/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/en/fancybox/jquery.fancybox.css">
+
+  
+<script src="/en/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/en/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -5,13 +5,17 @@
   
 
   
-  <title>千灵镜</title>
+  <title>Jupyter | 千灵镜</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="千灵镜">
-<meta property="og:url" content="https://cjql.github.io/en/page/2/index.html">
+  <meta name="description" content="jupyter命令一览。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jupyter">
+<meta property="og:url" content="https://cjql.github.io/en/2016/12/25/Jupyter/index.html">
 <meta property="og:site_name" content="千灵镜">
+<meta property="og:description" content="jupyter命令一览。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2016-12-24T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-01-01T07:58:31.951Z">
 <meta property="article:author" content="CJ">
 <meta name="twitter:card" content="summary">
   
@@ -64,16 +68,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Python知识结构" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Jupyter" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/en/2011/12/12/Python%E7%9F%A5%E8%AF%86%E7%BB%93%E6%9E%84/" class="article-date">
-  <time datetime="2011-12-11T17:23:47.000Z" itemprop="datePublished">2011-12-12</time>
+    <a href="/en/2016/12/25/Jupyter/" class="article-date">
+  <time datetime="2016-12-24T16:00:00.000Z" itemprop="datePublished">2016-12-25</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>►<a class="article-category-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%9F%BA%E7%A1%80/">基础</a>►<a class="article-category-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%9F%BA%E7%A1%80/Python/">Python</a>
+    <a class="article-category-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>►<a class="article-category-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%B7%A5%E5%85%B7/">工具</a>
   </div>
 
   </div>
@@ -83,8 +85,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/en/2011/12/12/Python%E7%9F%A5%E8%AF%86%E7%BB%93%E6%9E%84/">Python知识结构</a>
+    <h1 class="article-title" itemprop="name">
+      Jupyter
     </h1>
   
 
@@ -92,256 +94,100 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Python知识大全</p>
-        
-          <p class="article-more-link">
-            <a href="/en/2011/12/12/Python%E7%9F%A5%E8%AF%86%E7%BB%93%E6%9E%84/#more">Read More</a>
-          </p>
-        
+      <!-- Table of Contents -->
+      
+        <p>jupyter命令一览。</p>
+<a id="more"></a>
+<h1 id="新习"><a href="#新习" class="headerlink" title="新习"></a>新习</h1><h2 id="2018年12月13日"><a href="#2018年12月13日" class="headerlink" title="2018年12月13日"></a>2018年12月13日</h2><h3 id="jupyter-输出去掉-n"><a href="#jupyter-输出去掉-n" class="headerlink" title="jupyter 输出去掉 \n"></a>jupyter 输出去掉 <code>\n</code></h3><p>要 <code>print</code> 才出效果<br><a href="https://stackoverflow.com/questions/43835171/print-multiple-line-string-in-jupyter-notebook" target="_blank" rel="noopener">https://stackoverflow.com/questions/43835171/print-multiple-line-string-in-jupyter-notebook</a></p>
+<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h2 id="官方网站"><a href="#官方网站" class="headerlink" title="官方网站"></a>官方网站</h2><p><a href="http://jupyter.org/install" target="_blank" rel="noopener">官方网站</a> </p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p><code>pip install jupyter --user</code> 安装<br><code>jupyter notebook</code> 进入笔记本</p>
+<h2 id="修改默认路径和浏览器"><a href="#修改默认路径和浏览器" class="headerlink" title="修改默认路径和浏览器"></a>修改默认路径和浏览器</h2><p>Windows默认在chrome里面打开：<br>1.命令行：jupyter notebook –generate-config<br>2.打开文件：jupyter_notebook_config.py<br>3.在文件头部添加:</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> webbrowser</span><br><span class="line">webbrowser.register(<span class="string">'chrome'</span>, <span class="literal">None</span>, webbrowser.GenericBrowser(<span class="string">u'C:\Program Files (x86)\Google\Chrome\Application\chrome.exe'</span>))</span><br><span class="line">c.NotebookApp.browser = <span class="string">'chrome'</span></span><br></pre></td></tr></table></figure>
+<p>路径需要酌情调整。</p>
+<h1 id="在nbviewer中查看"><a href="#在nbviewer中查看" class="headerlink" title="在nbviewer中查看"></a>在nbviewer中查看</h1><p>github文件的网址中把<code>https://github.com</code> 替换为<code>https://nbviewer.jupyter.org/github</code> 。<br>注意斜线个数。<a href="https://nbviewer.jupyter.org/github/cjql/myjupyter/blob/master/MySQL.ipynb" target="_blank" rel="noopener">典型示例</a>：<code>https://nbviewer.jupyter.org/github/cjql/myjupyter/blob/master/MySQL.ipynb</code><br><a href="http://nbviewer.jupyter.org/faq" target="_blank" rel="noopener">官方网站</a></p>
+<h1 id="格式转换-html、md、pdf、letex"><a href="#格式转换-html、md、pdf、letex" class="headerlink" title="格式转换: html、md、pdf、letex"></a>格式转换: html、md、pdf、letex</h1><h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a href="https://cloud.tencent.com/developer/article/1008571" target="_blank" rel="noopener">格式转换</a></p>
+<h2 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h2><p><a href="https://ipython.org/ipython-doc/3/notebook/nbconvert.html" target="_blank" rel="noopener">官方文档</a><br><a href="https://cloud.tencent.com/developer/article/1008490" target="_blank" rel="noopener">腾讯云入门教程1</a> <a href="https://hub.packtpub.com/getting-started-jupyter-notebook-part-1/" target="_blank" rel="noopener">英文参考文献</a><br><a href="https://cloud.tencent.com/developer/article/1008493" target="_blank" rel="noopener">腾讯云入门教程2</a> <a href="https://hub.packtpub.com/getting-started-jupyter-notebook-part-2/" target="_blank" rel="noopener">英文参考文献</a></p>
+<h2 id="命令式"><a href="#命令式" class="headerlink" title="命令式"></a>命令式</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>jupyter nbconvert –to html notebook.ipynb</td>
+<td>ipynb转为html格式</td>
+</tr>
+<tr>
+<td>jupyter nbconvert –to html –template full notebook.ipynb</td>
+<td>对生成的html格式进行配置，默认配置，提供完整的静态html格式，交互性更强。</td>
+</tr>
+<tr>
+<td>jupyter nbconvert –to html –template basic notebook.ipynb</td>
+<td>简化的html，用于嵌入网页、博客等，这不包括html标题。</td>
+</tr>
+<tr>
+<td>jupyter nbconvert –to md notebook.ipynb</td>
+<td>简单的Markdown格式输出，cell单元不受影响，代码cell缩进4个空格。</td>
+</tr>
+<tr>
+<td>jupyter nbconvert –to letex notebook.ipynb</td>
+<td>Letex导出格式，生成后缀名为NOTEBOOK_NAME.tex的文件。</td>
+</tr>
+<tr>
+<td>jupyter nbconvert –to letex -template article notebook.ipynb</td>
+<td>默认配置，Latex文章。</td>
+</tr>
+<tr>
+<td>jupyter nbconvert –to letex -template report notebook.ipynb</td>
+<td>Latex报告，提供目录和章节。</td>
+</tr>
+<tr>
+<td>jupyter nbconvert –to letex -template basic notebook.ipynb</td>
+<td>最基本的Latex输出，经常用来自定义配置。</td>
+</tr>
+<tr>
+<td>jupyter nbconvert –to pdf notebook.ipynb</td>
+<td>转换为pdf格式分模板配置与latex配置是一样的。需要提前安装xelatex。</td>
+</tr>
+<tr>
+<td>sudo apt-get install texlive-full</td>
+<td>方法是安装texLive套装，texlive-full的安装包有点大，约1G多。</td>
+</tr>
+</tbody></table>
+<h2 id="面板式"><a href="#面板式" class="headerlink" title="面板式"></a>面板式</h2><p>ipynb转换为html、md、pdf等格式，还有另一种更简单的方法：在jupyter notebook中，选择<code>File-&gt;Download as</code>，直接选择需要转换的格式就可以了。需要注意的是，转换为pdf格式之前，同样要保证已经安装了xelatex。</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://cjql.github.io/en/2011/12/12/Python%E7%9F%A5%E8%AF%86%E7%BB%93%E6%9E%84/" data-id="ck4vcadg70013b0vx6mxp2b02" class="article-share-link">Share</a>
+      <a data-url="https://cjql.github.io/en/2016/12/25/Jupyter/" data-id="ck4vcadei0005b0vxbzet8fdl" class="article-share-link">Share</a>
       
       
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-计算机基础" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/en/2006/12/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="article-date">
-  <time datetime="2006-12-11T17:23:47.000Z" itemprop="datePublished">2006-12-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>►<a class="article-category-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%9F%BA%E7%A1%80/">基础</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/en/2017/12/25/%E7%88%AC%E8%99%AB%E7%9F%A5%E8%AF%86%E7%BB%93%E6%9E%84/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
+          爬虫知识结构
+        
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/en/2006/12/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/">计算机基础</a>
-    </h1>
   
+    <a href="/en/2016/12/25/GitHub/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">GitHub</div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>计算机基础笔记。</p>
-        
-          <p class="article-more-link">
-            <a href="/en/2006/12/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://cjql.github.io/en/2006/12/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" data-id="ck4vcadek0006b0vxe6prdfpd" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-计算机网络" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/en/2006/12/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" class="article-date">
-  <time datetime="2006-12-11T17:23:47.000Z" itemprop="datePublished">2006-12-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>►<a class="article-category-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%9F%BA%E7%A1%80/">基础</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/en/2006/12/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>计算机网络笔记。</p>
-        
-          <p class="article-more-link">
-            <a href="/en/2006/12/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://cjql.github.io/en/2006/12/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" data-id="ck4vcadhc001zb0vxgb6raqko" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-NLTK" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/en/1980/12/31/NLTK/" class="article-date">
-  <time datetime="1980-12-30T17:23:47.000Z" itemprop="datePublished">1980-12-31</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>►<a class="article-category-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/en/1980/12/31/NLTK/">NLTK</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>读书笔记：NLTK基础教程——用NLTK和Python库构建机器学习应用。</p>
-        
-          <p class="article-more-link">
-            <a href="/en/1980/12/31/NLTK/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://cjql.github.io/en/1980/12/31/NLTK/" data-id="ck4vcadg30012b0vx13vg8qkx" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-黑客攻防" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/en/1980/12/12/%E9%BB%91%E5%AE%A2%E6%94%BB%E9%98%B2/" class="article-date">
-  <time datetime="1980-12-11T17:23:47.000Z" itemprop="datePublished">1980-12-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>►<a class="article-category-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E9%BB%91%E5%AE%A2/">黑客</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/en/1980/12/12/%E9%BB%91%E5%AE%A2%E6%94%BB%E9%98%B2/">黑客攻防</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>黑客攻防笔记。</p>
-        
-          <p class="article-more-link">
-            <a href="/en/1980/12/12/%E9%BB%91%E5%AE%A2%E6%94%BB%E9%98%B2/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://cjql.github.io/en/1980/12/12/%E9%BB%91%E5%AE%A2%E6%94%BB%E9%98%B2/" data-id="ck4vcadge0016b0vxdinh2t4x" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-资源整理" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/en/1979/12/25/%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/" class="article-date">
-  <time datetime="1979-12-24T17:23:47.000Z" itemprop="datePublished">1979-12-25</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/en/categories/%E8%B5%84%E6%BA%90/">资源</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/en/1979/12/25/%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/">资源整理</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>资源。</p>
-        
-          <p class="article-more-link">
-            <a href="/en/1979/12/25/%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://cjql.github.io/en/1979/12/25/%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/" data-id="ck4vcadem0007b0vx23c61gc1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/en/"> 上一页</a><a class="page-number" href="/en/">1</a><span class="page-number current">2</span>
-  </nav>
 
 </section>
         

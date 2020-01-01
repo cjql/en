@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>数据结构与算法 | 千灵镜</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="数据结构与算法笔记。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构与算法">
+<meta property="og:url" content="https://cjql.github.io/en/2099/12/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/index.html">
+<meta property="og:site_name" content="千灵镜">
+<meta property="og:description" content="数据结构与算法笔记。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-8dd32c84e607dd12.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-aea8c6a097def30a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-4023d768ccc847ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/960">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-957dd1bf3b253047.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-b5651d8755dc784b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-a32d5e37c6c288b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-8732b0dcfa33f8fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-5cf609d3da3bb9fb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-4d945d62429f9cd0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-56758df782fec87f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-697d8320970c22df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-9f2c8facfb0f1f41.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-1e08ecb6e76d2b4e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-4a41ce148eb75fb6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-22431cb8b3461932.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-ff0261d520374613.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-7b939d020770a0ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-ceea8b7b425d0c4b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-e09d194846e7ff4d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-038cdb3b411571ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-6cbbd209cfd493c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-76b50c91eff4215c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-1c2d238a8c333fe5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-47c1b9529b3e7703.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-381c02ed527bc9d6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-080b3d00bc2cdf75.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-8e998b4aa32070d8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-561212d0e36619f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-a16f9d12d9b8e5e1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="article:published_time" content="2099-12-11T17:23:47.000Z">
+<meta property="article:modified_time" content="2020-01-01T08:02:51.109Z">
+<meta property="article:author" content="CJ">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/6908911-8dd32c84e607dd12.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+  
+    <link rel="alternate" href="/en/atom.xml" title="千灵镜" type="application/atom+xml">
+  
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/en/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/en/" id="logo">千灵镜</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/en/" id="subtitle">神驰八极，心游万仞</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/en/">Home</a>
+        
+          <a class="main-nav-link" href="/en/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/en/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://cjql.github.io/en"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-数据结构与算法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/en/2099/12/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="article-date">
+  <time datetime="2099-12-11T17:23:47.000Z" itemprop="datePublished">2099-12-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>►<a class="article-category-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%AE%97%E6%B3%95/">算法</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      数据结构与算法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      <!-- Table of Contents -->
+      
+        <p>数据结构与算法笔记。</p>
+<a id="more"></a>
+
+<p>数据结构与算法的关系:相互依赖不可分割的.<br>算法的定义:算法是解决特定问题求解步骤的描述,在计算机中为指令的有限序列,并且每条指令表示一个或多个操作。<br>算法的特性:有穷性、确定性、可行性、输入、输出。<br>算法的设计的要求:正确性、可读性、健壮性、高效率和低存储量需求。<br>算法特性与算法设计容易混,需要对比记忆。<br>算法的度量方法:事后统计方法(不科学、不准确)、事前分析估算方法。<br>在讲解如何用事前分析估算方法之前,我们先给出了函数渐近增长的定义。</p>
+<h1 id="函数的渐近增长"><a href="#函数的渐近增长" class="headerlink" title="函数的渐近增长"></a>函数的渐近增长</h1><p>给定两个函数f(n)和g(n),<br>如果存在一个整数N,使得对于所有的n&gt;N,f(n)总是比g(n)大,那么,我们说fn)的增长渐近快于g(n)。<br>于是我们可以得出一个结论,判断一个算法好不好,我们只迪过少量的数据是不能做出准确判断的<br>对比算法的关键执行次数函数的渐近增长性,基本就可以分析出:某个算法,随着n的变大,它会越来越优于另一算法,或者越来越差于另一算法。<br>算法时间复杂度的定义</p>
+<p>#推导大O阶的步骤</p>
+<blockquote>
+<p>用常数1取代运行时间中的所有加法常数。<br> 在修改后的运行次数函数中,只保留最高阶项。<br> 如果最高阶项存在且不是1,则去除与这个项相乘的常数。 </p>
+</blockquote>
+<p>得到的结果就是大0阶。<br>在得到算法的运行次数表达式后,很快得到它的时间复杂度,即大0阶。<br>推导大0阶很容易,但如何得到运行次数的表达式却是需要数学功底的。</p>
+<h1 id="常见的时间复杂度所耗时间的大小排列"><a href="#常见的时间复杂度所耗时间的大小排列" class="headerlink" title="常见的时间复杂度所耗时间的大小排列"></a>常见的时间复杂度所耗时间的大小排列</h1><p>O(1)&lt;O(logn)&lt;O(n)&lt;O(nlogn)&lt;O(n2)&lt;O(n3)&lt;O(2”)&lt;O(n!)&lt;O(n”)<br>算法最坏情况和平均情况<br>空间复杂度<br>弄明白算法的时间复杂度的估算<br>深究自己写的代码是否效率低下,是不是可以通过优化让计算机更加快速高效。</p>
+<h1 id="CPU与算法"><a href="#CPU与算法" class="headerlink" title="CPU与算法"></a>CPU与算法</h1><p>现在CPU越来越快,根本不用考虑算法的优劣,实现功能即可,用户感觉不到算法好坏造成的快慢？</p>
+<blockquote>假设CPU在短短几年间,速度提高了100倍,这其实已经很夸张了。
+而我们的某个算法本可以写出时间复杂度是O(n)的程序,却写出了0(n2)的程序,仅仅因为容易想到,也容易写。
+即在O(n2)的时间复杂度算法程序下,速度其实只提高了10(√100=10),而对于0(n)时间复杂度的算法来说,那才是真的100倍。
+也就是说,一台老式CPU的计算机运行O(n)的程序和一台速度提高100倍新式CPU运行O(n2)的程序。</blockquote>
+最终效率高的胜利方却是老式CPU的计算机,原因就在于算法的优劣直接决定了程序运行的效率。
+
+<h1 id="起源"><a href="#起源" class="headerlink" title="起源"></a>起源</h1><p>早期人们都把计算机理解为数值计算工具,就是感觉计算机当然是用来计算的,所以计算机解决问题,应该是先从具体问题中抽象出一个适当的数据模型,设计出个解此数据模型的算法,然后再编写程序,得到一个实际的软件。<br>可现实中,我们更多的不是解决数值计算的问题,而是需要一些更科学有效的手段(比如表、树和图等数据结构)的帮助,才能更好地处理问题。所以数据结构是门研究非数值计算的程序设计问题中的操作对象,以及它们之间的关系和操作等相关问题的学科<br>1968年,美国的高德纳( Donald E. Knuth)教授在其所写的《计算机程序设计艺术》第一卷《基本算法》中,较系统地阐述了数据的逻辑结构和存储结构及其操作,开创了数据结构的课程体系。同年,数据结构作为一门独立的课程,在计算机科学的学位课程中开始出现。也就是说,那之后计算机相关专业的学生开始接受《数据结构》的“折磨”—其实应该是享受才对。<br>之后,70年代初,出现了大型程序,软件也开始相对独立,结构程序设计成为程序设计方法学的主要内容,人们越来越重视“数据结构”,认为程序设计的实质是对确定的问题选择一种好的结构,加上设计一种好的算法。可见,数据结构在程序设计当中占据了重要的地位。</p>
+<h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><h2 id="数据"><a href="#数据" class="headerlink" title="数据"></a>数据</h2><p><img src="https://upload-images.jianshu.io/upload_images/6908911-8dd32c84e607dd12.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="https://upload-images.jianshu.io/upload_images/6908911-aea8c6a097def30a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>数据:是描述客观事物的符号,是计算机中可以操作的对象,是能被计算机识别,并输入给计算机处理的符号集合。</p>
+<h3 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h3><p>这里说的数据,其实就是符号,而且这些符号必须具备两个前提：可以输入到计算机中。能被计算机程序处理。</p>
+<h3 id="处理"><a href="#处理" class="headerlink" title="处理"></a>处理</h3><p>对于整型、实型等数值类型,可以进行数值计算。<br>对于字符数据类型,就需要进行非数值的处理。<br>而声音、图像、视频等其实是可以通过编码的手段变成字符数据来处理的。</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>数据类型:是指一组性质相同的值的集合及定义在此集合上的一些操作的总称。<br>数据类型是按照值的不同进行划分的。<br>在高级语言中,每个变量、常量和表达式都有各自的取值范围。类型就用来说明变量或表达式的取值范围和所能进行的操作。</p>
+<h3 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h3><p>数据类型：整型、实型等数值类型,字符（文字数据）及声音、图像、视频等非数值类型。</p>
+<h3 id="为什么有不同的数据类型"><a href="#为什么有不同的数据类型" class="headerlink" title="为什么有不同的数据类型"></a>为什么有不同的数据类型</h3><p>当年那些设计计算机语言的人,为什么会考虑到数据类型呢?</p>
+<h4 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h4><p>在计算机中,内存也不是无限大的。<br>计算整型数字的加减乘除运算,不需要开辟很大的内存空间。<br>于是计算机的研究者们就考虑,要对数据进行分类,分出来多种数据类型。<br>比如,在C语言中变量声明inta,b,这就意味着,在给变量a和b赋值时不能超出int的取值范围,变量a和b之间的运算只能是int类型所允许的运算。</p>
+<h4 id="底层语言与高级语言"><a href="#底层语言与高级语言" class="headerlink" title="底层语言与高级语言"></a>底层语言与高级语言</h4><p>因为不同的计算机有不同的硬件系统,这就要求程序语言最终通过编译器或解释器转换成底层语言,如汇编语言甚至是通过机器语言的数据类型来实现的。<br>实现1+2进行几次开关操作,这些操作是如何实现的。</p>
+<h4 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h4><p>无论什么计算机、什么计算机语言,大都会面临着如整数运算、实数运算、字符运算等操作,我们可以考虑把它们都抽象出来。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">抽象与抽象特性</span><br><span class="line">抽象：是指抽取出事物具有的普遍性的本质。它是抽出问题的特征而忽略非本质的细节,是对具体事物的一个概括。</span><br><span class="line">    抽象是一种思考问题的方式,它隐藏了繁杂的细节,只保留实现目标所必需的信息。</span><br><span class="line">    一个抽象数据类型到底需要哪些操作,这就只能由设计者根据实际需要（情况）来定。</span><br><span class="line">抽象数据类型( Abstract Data Type,ADT):是指一个数学模型及定义在该模型上的一组操作。</span><br><span class="line">    一个抽象数据类型定义了:一个数据对象、数据对象中各数据元素之间的关系及对数据元素的操作。</span><br><span class="line">    我们对已有的数据类型进行抽象,就有了抽象数据类型。</span><br><span class="line">    抽象数据类型不仅仅指那些已经定义并实现的数据类型,还可以是计算机编程者在设计软件程序时自己定义的数据类型。</span><br><span class="line">抽象数据类型体现了程序设计中问题分解、抽象和信息隐藏的特性。</span><br><span class="line">    把实际生活中的问题分解为多个规模小且容易处理的问题,</span><br><span class="line">    然后建立一个计算机能处理的数据模型,</span><br><span class="line">    并把每个功能模块的实现细节作为一个独立的单元,</span><br><span class="line">    从而使具体实现过程隐藏起来。</span><br><span class="line">抽象数据类型的定义仅取决于它的一组逻辑特性,而与其在计算机内部如何表示和实现无关。</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/6908911-4023d768ccc847ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/960" alt="数据抽象标准格式"></p>
+<h2 id="数据对象"><a href="#数据对象" class="headerlink" title="数据对象"></a>数据对象</h2><p>数据对象:是性质相同的数据元素的集合,是数据的子集。<br>实际应用中,在不产生混淆的情况下,我们都将数据对象简称为数据。<br>性质相同<br>指数据元素具有相同的数据项：数量和类型。<br>比如,还是刚才的例子,人都有姓名、生日、性别等相同的数据项。</p>
+<h3 id="数据元素（记录）"><a href="#数据元素（记录）" class="headerlink" title="数据元素（记录）"></a>数据元素（记录）</h3><p>数据元素：是组成数据的、有一定意义的基本单位,在计算机中通常作为整体处理。也被称为记录。<br>讨论问题时,数据元素才是数据结构中建立数据模型的着眼点。</p>
+<h4 id="数据项"><a href="#数据项" class="headerlink" title="数据项"></a>数据项</h4><p>数据项:一个数据元素可以由若干个数据项组成。姓名、年龄、性别等数据项,具体有哪些数据项,要视你做的系统来决定。<br>数据项是数据不可分割的最小单位。<br>数据项是数据的最小单位。<br>把数据项定义为最小单位,是有助于更好地解决问题。</p>
+<h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><h3 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h3><p>结构是指各个组成部分相互搭配和排列的方式。在现实世界中,不同数据元素之间不是独立的,而是存在特定的关系,我们将这些关系称为结构。</p>
+<h3 id="数据结构-1"><a href="#数据结构-1" class="headerlink" title="数据结构"></a>数据结构</h3><p>关系、结构、集合、组织形式。<br>数据结构：是相互之间存在一种或多种特定关系的数据元素的集合。<br>在计算机中,数据元素并不是孤立、杂乱无序的,而是具有内在联系的数据集合。<br>数据元素之间存在的一种或多种特定关系,也就是数据的组织形式。<br>为编写出一个“好”的程序,必须分析待处理对象的特性及各处理对象之间存在的关系。</p>
+<h4 id="逻辑结构"><a href="#逻辑结构" class="headerlink" title="逻辑结构"></a>逻辑结构</h4><p>逻辑结构：是指数据对象中数据元素之间的相互关系。</p>
+<ul>
+<li>集合结构：集合结构中的数据元素除了同属于一个集合外,它们之间没有其他关系。各个数据元素是“平等”的,它们的共同属性是“同属于一个集合”。数据结构中的集合关系就类似于数学中的集合。</li>
+<li>线性结构：数据元素之间是一对一的关系。如不转车的地铁站。</li>
+<li>树形结构：数据元素之间是一对多的关系。</li>
+<li>图形结构：数据元素之间是多对多的关系。<h4 id="物理结构"><a href="#物理结构" class="headerlink" title="物理结构"></a>物理结构</h4>物理结构：是指数据的逻辑结构在计算机中的存储形式数据是数据元素的集合。如何把数据元素存储到计算机的存储器中。如何存储数据元素之间的逻辑关系,是实现物理结构的重点和难点。<br>存储器主要是针对内存而言的,像硬盘、软盘、光盘等外部存储器的数据组织通常用文件结构来描述。</li>
+<li>顺序存储结构<blockquote>
+<p>顺序存储结构:是把数据元素存放在地址连续的存储单元里,其数据间的逻辑关系和物理关系是一致的。<br>说白了,就是排队占位。大家都按顺序排好,每个人占一小段空间,大家谁也别插谁的队。数组就是这样的顺序存储结构。<br>当你告诉计算机,你要建立一个有9个整型数据的数组时,计算机就在内存中找了片空地,按照一个整型所占位置的大小乘以9,开辟一段连续的空间,于是第一个数组数据就放在第一个位置,第二个数据放在第二个,这样依次摆放。  </p>
+</blockquote>
+</li>
+<li>链式存储结构<blockquote>
+<p>插队，添加，去掉，整个结构时刻都处于变化中。顺序存储是不科学的。<br>链式存储结构：是把数据元素存放在任意的存储单元里，这组存储单元可以是连续的，也可以是不连续的。<br>数据元素的存储关系并不能反映其逻辑关系，因此需要用一个指针存放数据元素的地址，这样通过地址就可以找到相关联数据元素的位置。<br>链式存储就灵活多了,数据存在哪里不重要,只要有一个指针存放了相应的地址就能找到它了。</p>
+</blockquote>
+<h2 id="示意图"><a href="#示意图" class="headerlink" title="示意图"></a>示意图</h2>我们在用示意图表示数据的逻辑结构时,要注意两点：<br>节点：将每一个数据元素看做一个结点,用圆圈表示。<br>连线：元素之间的逻辑关系用结点之间的连线表示,如果这个关系是有方向的,那么用带箭头的连线表示。</li>
+</ul>
+<h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><p>各个计算机,不管是大型机、小型机、PC、平板电脑、PDA,甚至智能手机</p>
+<h2 id="数据结构-2"><a href="#数据结构-2" class="headerlink" title="数据结构"></a>数据结构</h2><p>按照视点的不同,我们把数据结构分为：逻辑结构和物理结构。<br>逻辑结构是面向问题的,而物理结构就是面向计算机的,其基本的目标就是将数据及其逻辑关系存储到计算机的内存中。</p>
+<h3 id="逻辑结构-1"><a href="#逻辑结构-1" class="headerlink" title="逻辑结构"></a>逻辑结构</h3><p>逻辑结构分为：集合结构、线性结构、树形结构、图形结构。<br>逻辑结构是针对具体问题的,是为了解决某个问题，在对问题理解的基础上,选择一个合适的数据结构表示数据元素之间的逻辑关系。</p>
+<h3 id="物理结构（存储结构）"><a href="#物理结构（存储结构）" class="headerlink" title="物理结构（存储结构）"></a>物理结构（存储结构）</h3><p>数据元素的存储结构形式有两种:顺序存储和链式存储。</p>
+<h2 id="数据类型-1"><a href="#数据类型-1" class="headerlink" title="数据类型"></a>数据类型</h2><p>在C语言中,按照取值的不同,数据类型可以分为两类。<br>原子类型:是不可以再分解的基本类型,包括整型、实型、字符型等。<br>结构类型:由若干个类型组合而成,是可以再分解的。例如,整型数组是由若干整型数据组成的。</p>
+<h1 id="同名"><a href="#同名" class="headerlink" title="同名"></a>同名</h1><p>物理结构、存储结构</p>
+<h1 id="最"><a href="#最" class="headerlink" title="最"></a>最</h1><p>最需要关注的问题是逻辑结构。<br>数据的存储结构应正确反映数据元素之间的逻辑关系,这才是最为关键的。</p>
+<h1 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h1><p>基本数据类型一览。<br>int()、float()、str()</p>
+<!-- more -->[整数](/基本数据类型：整数)
+<p><a href="/基本数据类型：浮点数">浮点数</a><br><a href="/基本数据类型：字符">字符</a><br><a href="/基本数据类型：字符串">字符串</a><br><a href="/基本数据类型：布尔变量">布尔变量</a><br><a href="/基本数据类型：枚举">枚举</a><br><a href="/基本数据类型：具名常量">具名常量</a><br><a href="/基本数据类型：数组">数组</a><br><a href="/基本数据类型：自定义变量">自定义变量</a></p>
+<h1 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h1><p>int: 浮点型或合适的字符串(只能是整数字符串)<br>float: 整型或合适的字符串(只能是纯数字字符串)<br>str: </p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">int(<span class="string">'2'</span>) <span class="comment">#2</span></span><br><span class="line">int(<span class="number">2.14</span>) <span class="comment">#2 </span></span><br><span class="line">int(<span class="string">'2.14'</span>) <span class="comment">#SyntaxError: invalid character in identifier</span></span><br><span class="line">int(a) <span class="comment">#SyntaxError: invalid character in identifier</span></span><br><span class="line"></span><br><span class="line">float(<span class="number">2</span>) <span class="comment">#2.0</span></span><br><span class="line">float(<span class="string">'2.14'</span>) <span class="comment">#2.14</span></span><br><span class="line"></span><br><span class="line">str(<span class="number">2.14</span>) <span class="comment">#'2.14'</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="数据结构导图"><a href="#数据结构导图" class="headerlink" title="数据结构导图"></a>数据结构导图</h1><p>完整性、系统性、针对性<br>掌握问题的本质<br>解题：思路、方法、技巧、能力<br>分析、理解、领会</p>
+<p>数据结构、计算机组成原理、操作系统和计算机网络</p>
+<p>线性表、栈和队列、树、图<br>线性表：顺序存储结构、链式存储结构<br>特殊矩阵的压缩存储<br>二叉树、线索二叉树、二叉排序树、平衡二叉树、森林<br>定义和概念、基本操作、存储结构和实现、特殊、遍历方法、构造、应用、复杂度分析<br>算法：概念、比较、分析和应用<br>查找算法：顺序查找、折半查找法、B-树、散列表<br>排序算法：插入排序、气泡排序、简单选择排序、希尔排序、快速排序、堆排序、二路归并排序和基数排序</p>
+<h1 id="数据结构之线性表"><a href="#数据结构之线性表" class="headerlink" title="数据结构之线性表"></a>数据结构之线性表</h1><!-- more -->
+<h2 id="线性表的定义"><a href="#线性表的定义" class="headerlink" title="线性表的定义"></a>线性表的定义</h2><p><img src="https://upload-images.jianshu.io/upload_images/6908911-957dd1bf3b253047.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="线性表的定义"><br><img src="https://upload-images.jianshu.io/upload_images/6908911-b5651d8755dc784b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="线性表的定义"><br><img src="https://upload-images.jianshu.io/upload_images/6908911-a32d5e37c6c288b1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="线性结构分类"></p>
+<h2 id="线性表的基本操作"><a href="#线性表的基本操作" class="headerlink" title="线性表的基本操作"></a>线性表的基本操作</h2><p><img src="https://upload-images.jianshu.io/upload_images/6908911-8732b0dcfa33f8fd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="线性表的基本操作"><br><img src="https://upload-images.jianshu.io/upload_images/6908911-5cf609d3da3bb9fb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="线性表的基本操作"></p>
+<h2 id="线性表两种存储结构各自的特点及比较"><a href="#线性表两种存储结构各自的特点及比较" class="headerlink" title="线性表两种存储结构各自的特点及比较"></a>线性表两种存储结构各自的特点及比较</h2><p><img src="https://upload-images.jianshu.io/upload_images/6908911-4d945d62429f9cd0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="两种存储结构"><br><img src="https://upload-images.jianshu.io/upload_images/6908911-56758df782fec87f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="比较"><br><img src="https://upload-images.jianshu.io/upload_images/6908911-697d8320970c22df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="比较"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/6908911-9f2c8facfb0f1f41.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="数据结构、线性结构"><br><img src="https://upload-images.jianshu.io/upload_images/6908911-1e08ecb6e76d2b4e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="存储结构比较：效率"><br><img src="https://upload-images.jianshu.io/upload_images/6908911-4a41ce148eb75fb6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="存储结构比较：地址连续性"></p>
+<h2 id="线性表的实现：存储结构及应用"><a href="#线性表的实现：存储结构及应用" class="headerlink" title="线性表的实现：存储结构及应用"></a>线性表的实现：存储结构及应用</h2><p><img src="https://upload-images.jianshu.io/upload_images/6908911-22431cb8b3461932.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="存储结构分类"></p>
+<h2 id="顺序存储结构"><a href="#顺序存储结构" class="headerlink" title="顺序存储结构"></a>顺序存储结构</h2><p><img src="https://upload-images.jianshu.io/upload_images/6908911-ff0261d520374613.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="顺序表结构示意图"><br><img src="https://upload-images.jianshu.io/upload_images/6908911-7b939d020770a0ab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="顺序表结构体"></p>
+<h2 id="顺序存储结构的基本操作"><a href="#顺序存储结构的基本操作" class="headerlink" title="顺序存储结构的基本操作"></a>顺序存储结构的基本操作</h2><p><img src="https://upload-images.jianshu.io/upload_images/6908911-ceea8b7b425d0c4b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="创建清空判断更新"><br><img src="https://upload-images.jianshu.io/upload_images/6908911-e09d194846e7ff4d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="插入元素"><br><img src="https://upload-images.jianshu.io/upload_images/6908911-038cdb3b411571ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="删除元素"><br><img src="https://upload-images.jianshu.io/upload_images/6908911-6cbbd209cfd493c5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="删除元素"><br><img src="https://upload-images.jianshu.io/upload_images/6908911-76b50c91eff4215c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="插入和删除"></p>
+<h2 id="链式存储结构"><a href="#链式存储结构" class="headerlink" title="链式存储结构"></a>链式存储结构</h2><p><img src="https://upload-images.jianshu.io/upload_images/6908911-1c2d238a8c333fe5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="链式存储结构"><br><img src="https://upload-images.jianshu.io/upload_images/6908911-47c1b9529b3e7703.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="链式存储结构基本操作"><br><img src="https://upload-images.jianshu.io/upload_images/6908911-381c02ed527bc9d6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="链式存储结构基本操作"><br><img src="https://upload-images.jianshu.io/upload_images/6908911-080b3d00bc2cdf75.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="链式存储结构基本操作"></p>
+<h2 id="其他常见的链式存储结构"><a href="#其他常见的链式存储结构" class="headerlink" title="其他常见的链式存储结构"></a>其他常见的链式存储结构</h2><p><img src="https://upload-images.jianshu.io/upload_images/6908911-8e998b4aa32070d8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="其他常见的链式存储结构"><br><img src="https://upload-images.jianshu.io/upload_images/6908911-561212d0e36619f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="其他常见的链式存储结构"><br><img src="https://upload-images.jianshu.io/upload_images/6908911-a16f9d12d9b8e5e1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="其他常见的链式存储结构"></p>
+<p>线性表的应用<br>链式存储结构中指针的操作<br>链式存储结构中单链表的应用场合<br>带表头结点的单链表的应用场合<br>循环链表、的应用场合<br>双向循环链表的应用场合</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://cjql.github.io/en/2099/12/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" data-id="ck4vcadga0014b0vxcpsi7byd" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/en/2100/12/12/%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          代码大全
+        
+      </div>
+    </a>
+  
+  
+    <a href="/en/2018/12/25/Flask%E8%AF%AD%E6%B3%95%E9%87%8A%E4%B9%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Flask语法释义</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/en/categories/00%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">00学习方法</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/00%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/00%E5%85%A8%E6%99%AF/">00全景</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/00%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Web/">Web</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Web/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Web/Python/">Python</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Web/Python/Flask/">Flask</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%9F%BA%E7%A1%80/">基础</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%9F%BA%E7%A1%80/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%B7%A5%E5%85%B7/">工具</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%88%AC%E8%99%AB/">爬虫</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%88%AC%E8%99%AB/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%AE%97%E6%B3%95/">算法</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E9%BB%91%E5%AE%A2/">黑客</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%B5%84%E6%BA%90/">资源</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2100/12/">十二月 2100</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2099/12/">十二月 2099</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2018/12/">十二月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2017/12/">十二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2016/12/">十二月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2011/12/">十二月 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2006/12/">十二月 2006</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/1980/12/">十二月 1980</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/1979/12/">十二月 1979</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/en/2100/12/31/%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86%E6%9C%AF%E8%AF%AD%E8%A1%A8/">知识整理术语表</a>
+          </li>
+        
+          <li>
+            <a href="/en/2100/12/12/cs_learning_path/">cs_learning_path</a>
+          </li>
+        
+          <li>
+            <a href="/en/2100/12/12/%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A8/">代码大全</a>
+          </li>
+        
+          <li>
+            <a href="/en/2099/12/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+          </li>
+        
+          <li>
+            <a href="/en/2018/12/25/Flask%E8%AF%AD%E6%B3%95%E9%87%8A%E4%B9%89/">Flask语法释义</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 CJ<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  <div class="goBack" onclick="window.scrollTo('0','0')"></div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/en/" class="mobile-nav-link">Home</a>
+  
+    <a href="/en/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/en/fancybox/jquery.fancybox.css">
+
+  
+<script src="/en/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/en/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Python知识结构 | 千灵镜</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Python知识大全">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python知识结构">
+<meta property="og:url" content="https://cjql.github.io/en/2011/12/12/Python%E7%9F%A5%E8%AF%86%E7%BB%93%E6%9E%84/index.html">
+<meta property="og:site_name" content="千灵镜">
+<meta property="og:description" content="Python知识大全">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2011-12-11T17:23:47.000Z">
+<meta property="article:modified_time" content="2020-01-01T08:03:12.380Z">
+<meta property="article:author" content="CJ">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/en/atom.xml" title="千灵镜" type="application/atom+xml">
+  
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/en/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/en/" id="logo">千灵镜</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/en/" id="subtitle">神驰八极，心游万仞</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/en/">Home</a>
+        
+          <a class="main-nav-link" href="/en/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/en/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://cjql.github.io/en"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Python知识结构" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/en/2011/12/12/Python%E7%9F%A5%E8%AF%86%E7%BB%93%E6%9E%84/" class="article-date">
+  <time datetime="2011-12-11T17:23:47.000Z" itemprop="datePublished">2011-12-12</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>►<a class="article-category-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%9F%BA%E7%A1%80/">基础</a>►<a class="article-category-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%9F%BA%E7%A1%80/Python/">Python</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python知识结构
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      <!-- Table of Contents -->
+      
+        <p>Python知识大全</p>
+<a id="more"></a>
+
+<h1 id="1-程序交互"><a href="#1-程序交互" class="headerlink" title="1. 程序交互"></a>1. 程序交互</h1><p>input():带提示语的input。name=input(‘Please enter your name:’) 把输入以字符串的形式保存在name里<br>print():print<code>多项</code>、print的<code>%</code>格式化占位符、print的<code>format</code>形式 #可以接收多参<br>三引号：原样输出<br>转意符号<br>学习，思考，应用，校正。人做事情，都需要有个反馈，反馈的周期越久，感觉上就越困难。很多大事情，都是由一个个小事务重复或迭代而成，每个小事务中，包含了反馈和校正。学了什么，启示是什么，和其它知识的联系是什么</p>
+<!-- more -->
+<p>r:优先级最高<br>:把字母转义为特殊字符。防止引号表示字符串。</p>
+<p>\n:制表符<br>\t:换行符</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'a\nb'</span>)</span><br><span class="line">print(<span class="string">r'a\nb'</span>)</span><br><span class="line">print(<span class="string">'I\'m OK'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># a</span></span><br><span class="line"><span class="comment"># b</span></span><br><span class="line"><span class="comment"># a\nb</span></span><br><span class="line"><span class="comment"># I'm OK</span></span><br></pre></td></tr></table></figure>
+<h1 id="2-文件读写"><a href="#2-文件读写" class="headerlink" title="2. 文件读写"></a>2. 文件读写</h1><p><a href="https://docs.python.org/3/tutorial/inputoutput.html" target="_blank" rel="noopener">官方文档</a></p>
+<h2 id="2-1-无with"><a href="#2-1-无with" class="headerlink" title="2.1. 无with"></a>2.1. 无with</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">f= open(<span class="string">"file1.txt"</span>,encoding=<span class="string">'utf-8'</span>)<span class="comment">#不写encoding，默认为操作系统编码</span></span><br><span class="line">file_data=f.read() <span class="comment">#完全读取</span></span><br><span class="line">print(file_data)</span><br><span class="line">f.close() <span class="comment">#需要执行关闭操作</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-2-有with"><a href="#2-2-有with" class="headerlink" title="2.2. 有with"></a>2.2. 有with</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">"file.txt"</span>,encoding=<span class="string">'utf-8'</span>)<span class="keyword">as</span> f:</span><br><span class="line">    file_data=f.read()</span><br><span class="line">    print(file_data)  <span class="comment">#不需要执行close(),系统会自动关闭。</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-3-readline"><a href="#2-3-readline" class="headerlink" title="2.3. readline()"></a>2.3. readline()</h2><p>默认从文件左上角开始，读取一行，指针下移。通过f.seek()可改变指针位置和要开始读的内容。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">"file.txt"</span>,encoding=<span class="string">'utf-8'</span>)<span class="keyword">as</span> f:</span><br><span class="line">    print(f.readable()) <span class="comment">#判断是否可读</span></span><br><span class="line">    print(f.writable()) <span class="comment">#判断是否可写</span></span><br><span class="line">    print(<span class="number">1</span>, f.readline()) <span class="comment">#一次只读一行</span></span><br><span class="line">    print(<span class="number">2</span>, f.readline())</span><br><span class="line">    print(<span class="number">3</span>, f.readline())</span><br><span class="line">    print(<span class="number">4</span>, f.readline())</span><br><span class="line">    print(<span class="number">5</span>, f.readline())</span><br><span class="line">    print(<span class="number">6</span>, f.readline())</span><br><span class="line">    print(<span class="number">7</span>, f.readline())</span><br><span class="line">    print(<span class="number">8</span>, f.readline())</span><br></pre></td></tr></table></figure>
+<h2 id="2-4-readlines"><a href="#2-4-readlines" class="headerlink" title="2.4. readlines()"></a>2.4. readlines()</h2><p>从文件左上角开始，将文件内容读取到列表中。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">"file.txt"</span>,encoding=<span class="string">'utf-8'</span>)<span class="keyword">as</span> f:</span><br><span class="line">   print(f.readlines()) </span><br><span class="line"><span class="comment"># ['1111\n', '222\n', '333\n', '44\n', '5555\n', '666\n', '你好!\n', 'hello']</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> f.readlines():</span><br><span class="line">        print(i)</span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 4</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 5</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 6</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 你好!</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># hello</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-5-不打印换行符"><a href="#2-5-不打印换行符" class="headerlink" title="2.5. 不打印换行符"></a>2.5. 不打印换行符</h2><p>print(,end=’’)</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'file.txt'</span>,<span class="string">'r'</span>,encoding=<span class="string">'utf-8'</span>,newline=<span class="string">''</span>) <span class="keyword">as</span> f:</span><br><span class="line">    print(f.readlines())</span><br><span class="line"><span class="comment"># #     ['1111\r\n', '222\r\n', '333\r\n', '44\r\n', '5555\r\n', '666\r\n', '你好!\r\n', 'hello']</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> f.readlines():</span><br><span class="line">        print(i,end=<span class="string">''</span>) <span class="comment">#不打印换行符</span></span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line"><span class="comment"># 4</span></span><br><span class="line"><span class="comment"># 5</span></span><br><span class="line"><span class="comment"># 6</span></span><br><span class="line"><span class="comment"># 你好!</span></span><br><span class="line"><span class="comment"># hello</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-6-r"><a href="#2-6-r" class="headerlink" title="2.6. r+"></a>2.6. r+</h2><p>按读的内容和指针位置逐行覆盖原来的内容</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'file.txt'</span>,<span class="string">'r+'</span>,encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f: <span class="comment">#从指针位置所在处写入</span></span><br><span class="line">    m = f.read()</span><br><span class="line">    m = m.replace(<span class="string">'a'</span>,<span class="string">'h'</span>)</span><br><span class="line">    f.seek(<span class="number">0</span>)</span><br><span class="line">    f.write(m)</span><br><span class="line">    f.write(<span class="string">'a1\n'</span>)</span><br><span class="line">    f.write(<span class="string">'b1\nc1\n'</span>)</span><br><span class="line">    <span class="comment"># f.writelines(['d1\n', 'e1\n'])</span></span><br><span class="line">    f.seek(<span class="number">0</span>) <span class="comment">#将指针seek到0位置，否则读不出数据</span></span><br><span class="line">    print(f.read())</span><br></pre></td></tr></table></figure>
+<h2 id="2-7-a"><a href="#2-7-a" class="headerlink" title="2.7. a+"></a>2.7. a+</h2><p>写到文件最后</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'file.txt'</span>,<span class="string">'a+'</span>,encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(<span class="string">'写到文件最后'</span>)</span><br><span class="line">    f.seek(<span class="number">0</span>)</span><br><span class="line">    print(f.read())</span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line"><span class="comment"># 4</span></span><br><span class="line"><span class="comment"># 5</span></span><br><span class="line"><span class="comment"># 6</span></span><br><span class="line"><span class="comment"># 你好!</span></span><br><span class="line"><span class="comment"># hello写到文件最后</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-8-w"><a href="#2-8-w" class="headerlink" title="2.8. w+"></a>2.8. w+</h2><p>在with那行语句结束时，整个文件原来的内容被清空，无法读取原文件的数据。但后面的内容可以边读边写。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'file.txt'</span>,<span class="string">'wb+'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    file_data = <span class="string">'test wb'</span></span><br><span class="line">    f.write(file_data.encode(<span class="string">'utf-8'</span>))</span><br><span class="line">    f.seek(<span class="number">0</span>)</span><br><span class="line">    print(f.read())</span><br><span class="line"><span class="comment"># b'test wb'</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-9-查看文件编码"><a href="#2-9-查看文件编码" class="headerlink" title="2.9. 查看文件编码"></a>2.9. 查看文件编码</h2><p>待查证</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'file.txt'</span>,<span class="string">'a+'</span>,encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    print(f.encoding) <span class="comment">#查看文件编码</span></span><br><span class="line"><span class="comment"># utf - 8</span></span><br><span class="line"><span class="comment"># #'字符串'---------encode---------》bytes</span></span><br><span class="line"><span class="comment"># #bytes---------decode---------》'字符串'</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-10-b模式不能指定编码"><a href="#2-10-b模式不能指定编码" class="headerlink" title="2.10. b模式不能指定编码"></a>2.10. b模式不能指定编码</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">'file.txt'</span>,<span class="string">'rb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    file_data=f.read()</span><br><span class="line">    print(file_data)</span><br><span class="line">    print(file_data.decode(<span class="string">'utf-8'</span>))</span><br><span class="line"><span class="comment"># b'1111\r\n222\r\n333\r\n44\r\n5555\r\n666\r\n\xe4\xbd\xa0\xe5\xa5\xbd!\r\nhello'</span></span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line"><span class="comment"># 4</span></span><br><span class="line"><span class="comment"># 5</span></span><br><span class="line"><span class="comment"># 6</span></span><br><span class="line"><span class="comment"># 你好!</span></span><br><span class="line"><span class="comment"># hello</span></span><br></pre></td></tr></table></figure>
+<h2 id="2-11-flush-tell-seek-truncate"><a href="#2-11-flush-tell-seek-truncate" class="headerlink" title="2.11. flush(),tell(),seek(),truncate()"></a>2.11. flush(),tell(),seek(),truncate()</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">flush() <span class="comment">#文件内容从内存刷到硬盘</span></span><br><span class="line">tell()  <span class="comment">#查看文件当前指针位置</span></span><br><span class="line">seek(<span class="number">3</span>) <span class="comment">#从开头开始算，将指针移动到第三个字节</span></span><br><span class="line">        <span class="comment">#   seek 有三种工作方式，seek(offset[, whence])</span></span><br><span class="line">        <span class="comment">#   seek(2,0)=seek(2),0是默认方式，相当于从0字节位置开始</span></span><br><span class="line">        <span class="comment">#   seek(2,1)   1 相对当前位置</span></span><br><span class="line">        <span class="comment">#   seek(-2,2)  2 从文件末尾开始</span></span><br><span class="line">truncate(<span class="number">10</span>) <span class="comment">#从开头开始算，将文件只保留从0-10个字节的内容，文件打开方式必须包含"写"，</span></span><br><span class="line">               <span class="comment">#但是w和w+除外，因为这两种方式会首先把文件清空。</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'file.txt'</span>,<span class="string">'ab'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.truncate(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="2-12-打印文件最后一行"><a href="#2-12-打印文件最后一行" class="headerlink" title="2.12. 打印文件最后一行"></a>2.12. 打印文件最后一行</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">"file.txt"</span>,<span class="string">'rb'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> f:   <span class="comment">#这种方式不会读取整个文件，需要从哪里读取才从哪里开始读取，循环文件的推荐方式</span></span><br><span class="line">        offs=<span class="number">-5</span>         <span class="comment">#偏移量，根据一行大小确定</span></span><br><span class="line">        <span class="keyword">while</span> <span class="literal">True</span>:</span><br><span class="line">            f.seek(offs,<span class="number">2</span>)</span><br><span class="line">            data=f.readlines()</span><br><span class="line">            <span class="keyword">if</span> len(data) &gt; <span class="number">1</span>:</span><br><span class="line">                print(<span class="string">'这是最后一行：'</span>,data[<span class="number">-1</span>].decode(<span class="string">'utf-8'</span>))</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            offs*=<span class="number">2</span></span><br><span class="line"><span class="comment"># 这是最后一行： hello你好!hello你好!hello你好!hello你好!</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="3-字符串"><a href="#3-字符串" class="headerlink" title="3. 字符串"></a>3. 字符串</h1><p><a href="https://docs.python.org/3/library/string.html" target="_blank" rel="noopener">https://docs.python.org/3/library/string.html</a></p>
+<h2 id="3-1-dir-str"><a href="#3-1-dir-str" class="headerlink" title="3.1. dir(str)"></a>3.1. dir(str)</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span>dir(str)</span><br><span class="line">[<span class="string">'__add__'</span>, <span class="string">'__class__'</span>, <span class="string">'__contains__'</span>, <span class="string">'__delattr__'</span>, <span class="string">'__dir__'</span>, <span class="string">'__doc__'</span>, <span class="string">'__eq__'</span>, <span class="string">'__format__'</span>, <span class="string">'__ge__'</span>, <span class="string">'__getattribute__'</span>, <span class="string">'__getitem__'</span>, <span class="string">'__getnewargs__'</span>, <span class="string">'__gt__'</span>, <span class="string">'__hash__'</span>, <span class="string">'__init__'</span>, <span class="string">'__init_subclass__'</span>, <span class="string">'__iter__'</span>, <span class="string">'__le__'</span>, <span class="string">'__len__'</span>, <span class="string">'__lt__'</span>, <span class="string">'__mod__'</span>, <span class="string">'__mul__'</span>, <span class="string">'__ne__'</span>, <span class="string">'__new__'</span>, <span class="string">'__reduce__'</span>, <span class="string">'__reduce_ex__'</span>, <span class="string">'__repr__'</span>, <span class="string">'__rmod__'</span>, <span class="string">'__rmul__'</span>, <span class="string">'__setattr__'</span>, <span class="string">'__sizeof__'</span>, <span class="string">'__str__'</span>, <span class="string">'__subclasshook__'</span>, <span class="string">'capitalize'</span>, <span class="string">'casefold'</span>, <span class="string">'center'</span>, <span class="string">'count'</span>, <span class="string">'encode'</span>, <span class="string">'endswith'</span>, <span class="string">'expandtabs'</span>, <span class="string">'find'</span>, <span class="string">'format'</span>, <span class="string">'format_map'</span>, <span class="string">'index'</span>, <span class="string">'isalnum'</span>, <span class="string">'isalpha'</span>, <span class="string">'isascii'</span>, <span class="string">'isdecimal'</span>, <span class="string">'isdigit'</span>, <span class="string">'isidentifier'</span>, <span class="string">'islower'</span>, <span class="string">'isnumeric'</span>, <span class="string">'isprintable'</span>, <span class="string">'isspace'</span>, <span class="string">'istitle'</span>, <span class="string">'isupper'</span>, <span class="string">'join'</span>, <span class="string">'ljust'</span>, <span class="string">'lower'</span>, <span class="string">'lstrip'</span>, <span class="string">'maketrans'</span>, <span class="string">'partition'</span>, <span class="string">'replace'</span>, <span class="string">'rfind'</span>, <span class="string">'rindex'</span>, <span class="string">'rjust'</span>, <span class="string">'rpartition'</span>, <span class="string">'rsplit'</span>, <span class="string">'rstrip'</span>, <span class="string">'split'</span>, <span class="string">'splitlines'</span>, <span class="string">'startswith'</span>, <span class="string">'strip'</span>, <span class="string">'swapcase'</span>, <span class="string">'title'</span>, <span class="string">'translate'</span>, <span class="string">'upper'</span>, <span class="string">'zfill'</span>]</span><br></pre></td></tr></table></figure>
+<p>upper()/lower()：改变字符串中字母的大小写。<br>strip()：删除字符串首尾空白符（如’\n’、’\n\r’）或指定字符。<br>lstrip()：删除字符串左边空白符或指定字符。<br>rstrip()：删除字符串右边空白符或指定字符。  </p>
+<p>去空格及特殊符号:</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s.strip().lstrip().rstrip(<span class="string">','</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="3-2"><a href="#3-2" class="headerlink" title="3.2. *"></a>3.2. *</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">'Ab'</span></span><br><span class="line">print(str1*<span class="number">5</span>)  <span class="comment">## AbAbAbAbAb</span></span><br><span class="line">print(<span class="number">5</span>*str1)  <span class="comment">## AbAbAbAbAb</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-3-连接字符串"><a href="#3-3-连接字符串" class="headerlink" title="3.3. 连接字符串"></a>3.3. 连接字符串</h2><p><a href="https://www.pythontab.com/html/2015/pythonhexinbiancheng_1112/981.html" target="_blank" rel="noopener">python字符串连接的三种方法及其效率、适用场景详解</a></p>
+<h3 id="3-3-1"><a href="#3-3-1" class="headerlink" title="3.3.1. +"></a>3.3.1. +</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">str1=<span class="string">'a'</span></span><br><span class="line">str2=<span class="string">'b'</span></span><br><span class="line"><span class="keyword">print</span> str1+str2  <span class="comment">## ab</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-3-2-join"><a href="#3-3-2-join" class="headerlink" title="3.3.2. join"></a>3.3.2. join</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># S.join(seq) #把seq代表的字符串序列，用S连接起来</span></span><br><span class="line">delimiter = <span class="string">','</span></span><br><span class="line">mylist = [<span class="string">'Brazil'</span>, <span class="string">'Russia'</span>, <span class="string">'India'</span>, <span class="string">'China'</span>]  <span class="comment">#Brazil,Russia,India,China</span></span><br><span class="line"><span class="keyword">print</span> delimiter.join(mylist)</span><br></pre></td></tr></table></figure>
+<h3 id="3-3-3-format及百分号操作符"><a href="#3-3-3-format及百分号操作符" class="headerlink" title="3.3.3. format及百分号操作符"></a>3.3.3. format及百分号操作符</h3><p>默认：顺序传递<br>标准格式：{位置:值}<br><a href="https://docs.python.org/3/library/string.html#format-string-syntax" target="_blank" rel="noopener">https://docs.python.org/3/library/string.html#format-string-syntax</a></p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'&#123;1&#125; is better than &#123;0&#125;'</span>.format(<span class="string">'a'</span>,<span class="string">'b'</span>)  </span><br><span class="line"><span class="comment"># 'b is better than a'</span></span><br><span class="line"><span class="string">'&#123;:10.2f&#125;'</span>.format(<span class="number">1.23456</span>) <span class="comment"># 长度为10，保留两位小数，前面空格填补</span></span><br></pre></td></tr></table></figure>
+<p>百分号操作符<br>%操作符：格式化符号。更高级别的控制。</p>
+<ul>
+<li>%和字母间加数字，点前为总长，点后为小数位数。<br>eg：%S%d%4.2f:占位符（格式化符号）</li>
+<li>%s:字符串</li>
+<li>%d:整数</li>
+<li>%f:浮点数</li>
+<li>%5d:前面添加空格，总长度为5</li>
+<li>%4.2f:总长4，2个小数位的浮点数<br>print(“I’m %s. I’m %d year old” % (‘Vamei’, 99))</li>
+</ul>
+<h2 id="3-4-split"><a href="#3-4-split" class="headerlink" title="3.4. split()"></a>3.4. split()</h2><p>分割字符串<br>split()：按指定分隔符来切割字符串，返回列表。无分隔符时，默认分隔符是空格。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># S.rsplit([sep, [maxsplit]])</span></span><br><span class="line"><span class="comment"># 以sep为分隔符，把S分成一个list。maxsplit表示分割的次数。默认的分割符为空白字符</span></span><br><span class="line">s = <span class="string">'ab,cde,fgh,ijk'</span></span><br><span class="line">print(s.split(<span class="string">','</span>)) <span class="comment">#返回列表 ['ab', 'cde', 'fgh', 'ijk']</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-5-splitlines"><a href="#3-5-splitlines" class="headerlink" title="3.5. splitlines()"></a>3.5. splitlines()</h2><p>按行分割字符串</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">S.splitlines([keepends])</span><br><span class="line"><span class="comment"># 把S按照行分割符分为一个list，keepends是一个bool值，如果为真每行后而会保留行分割符。</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-6-replace"><a href="#3-6-replace" class="headerlink" title="3.6. replace()"></a>3.6. replace()</h2><p>replace()：替换目标字符串中的子串。 </p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">S.replace(oldstr, newstr, [count])</span><br><span class="line"><span class="comment"># 把S中的oldstar替换为newstr，count为替换次数。这是替换的通用形式，还有一些函数进行特殊字符的替换</span></span><br><span class="line">S.strip([chars])</span><br><span class="line"><span class="comment"># 把S中前后chars中有的字符全部去掉，可以理解为把S前后chars替换为None</span></span><br><span class="line">S.lstrip([chars])</span><br><span class="line">S.rstrip([chars])</span><br><span class="line">S.expandtabs([tabsize])<span class="comment">#把S中的tab字符替换没空格，每个tab替换为tabsize个空格，默认是8个</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-7-translate"><a href="#3-7-translate" class="headerlink" title="3.7. translate()"></a>3.7. translate()</h2><p>批量替换</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># S.translate(table[,deletechars])</span></span><br><span class="line"><span class="comment">## 49.1. 使用上面的函数产后的翻译表，把S进行翻译，并把deletechars中有的字符删掉。需要注意的是，如果S为unicode字符串，那么就不支持 deletechars参数，可以使用把某个字符翻译为None的方式实现相同的功能。此外还可以使用codecs模块的功能来创建更加功能强大的翻译表。</span></span><br><span class="line"><span class="keyword">from</span> string <span class="keyword">import</span> maketrans   <span class="comment"># 引用 maketrans 函数。</span></span><br><span class="line">intab = <span class="string">"aeiou"</span></span><br><span class="line">outtab = <span class="string">"12345"</span></span><br><span class="line">trantab = maketrans(intab, outtab)  <span class="comment">#这里注意一下</span></span><br><span class="line">str = <span class="string">"this is string example....wow!!!"</span>;</span><br><span class="line"><span class="keyword">print</span> str.translate(trantab);</span><br></pre></td></tr></table></figure>
+<h2 id="3-8-index"><a href="#3-8-index" class="headerlink" title="3.8. index()"></a>3.8. index()</h2><p>查找字符，返回第一个字符出现的位置。&lt; 0 为未找到</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">'strchr'</span></span><br><span class="line">substr = <span class="string">'ch'</span></span><br><span class="line">n = str.index(substr)</span><br><span class="line"><span class="keyword">print</span> n  <span class="comment">## 3 非子字符串时报错，其余返回子字符串第一个字符的下标。中文报错</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-9-find"><a href="#3-9-find" class="headerlink" title="3.9. find()"></a>3.9. find()</h2><p>查找字符串</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sStr1 = <span class="string">'abcdefg'</span></span><br><span class="line">sStr2 = <span class="string">'cde'</span></span><br><span class="line"><span class="keyword">print</span> sStr1.find(sStr2) <span class="comment">#非子字符串时返回-1。否则返回子字符串第一个字符的下标。中文报错。</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-10-index、rfind、rindex、count"><a href="#3-10-index、rfind、rindex、count" class="headerlink" title="3.10. index、rfind、rindex、count"></a>3.10. index、rfind、rindex、count</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 返回S中出现substr的第一个字母的标号，如果S中没有substr则返回-1。start和end作用就相当于在S[start:end]中搜索</span></span><br><span class="line">S.index(substr, [start, [end]])</span><br><span class="line"><span class="comment"># 与find()相同，只是在S中没有substr时，会返回一个运行时错误</span></span><br><span class="line">S.rfind(substr, [start, [end]])</span><br><span class="line"><span class="comment"># 返回S中最后出现的substr的第一个字母的标号，如果S中没有substr则返回-1，也就是说从右边算起的第一次出现的substr的首字母标号</span></span><br><span class="line">S.rindex(substr, [start, [end]])</span><br><span class="line">S.count(substr, [start, [end]]) <span class="comment">#计算substr在S中出现的次数</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-11-ljust、rjust、center、zfill"><a href="#3-11-ljust、rjust、center、zfill" class="headerlink" title="3.11. ljust、rjust、center、zfill"></a>3.11. ljust、rjust、center、zfill</h2><p>字符串在输出时的对齐</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">"this is string example wow!!!"</span></span><br><span class="line">print(str.ljust(<span class="number">40</span>,<span class="string">'a'</span>))   </span><br><span class="line">print(str.ljust(<span class="number">41</span>,<span class="string">'a'</span>))   </span><br><span class="line">print(str.rjust(<span class="number">40</span>,<span class="string">'a'</span>))  </span><br><span class="line">print(str.center(<span class="number">40</span>,))</span><br><span class="line">print(str.zfill(<span class="number">40</span>))</span><br><span class="line"><span class="comment">## 52.1. this is string example wow!!!aaaaaaaaaaa</span></span><br><span class="line"><span class="comment">## 52.2. this is string example wow!!!aaaaaaaaaaaa</span></span><br><span class="line"><span class="comment">## 52.3. aaaaaaaaaaathis is string example wow!!!</span></span><br><span class="line"><span class="comment">## 52.4. this is string example wow!!!</span></span><br><span class="line"><span class="comment">## 52.5. this is string example wow!!!</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-12-cmp-str1-str2"><a href="#3-12-cmp-str1-str2" class="headerlink" title="3.12. cmp(str1,str2)"></a>3.12. cmp(str1,str2)</h2><p>比较字符串。<a href="http://www.runoob.com/python/func-number-cmp.html" target="_blank" rel="noopener">http://www.runoob.com/python/func-number-cmp.html</a></p>
+<h2 id="3-13-len-str"><a href="#3-13-len-str" class="headerlink" title="3.13. len(str)"></a>3.13. len(str)</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sStr1 = <span class="string">'strlen'</span></span><br><span class="line"><span class="keyword">print</span> len(sStr1)</span><br></pre></td></tr></table></figure>
+<h2 id="3-14"><a href="#3-14" class="headerlink" title="3.14. [:]"></a>3.14. [:]</h2><p>字符串切片</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">tr1 = <span class="string">'1234567890'</span></span><br><span class="line">print(tr1[<span class="number">0</span>:<span class="number">3</span>]) <span class="comment">#截取第一位到第三位的字符 123</span></span><br><span class="line">print(tr1[:]) <span class="comment">#截取字符串的全部字符 1234567890</span></span><br><span class="line">print(tr1[<span class="number">6</span>:]) <span class="comment">#截取第七个字符到结尾 7890</span></span><br><span class="line">print(tr1[:<span class="number">-3</span>]) <span class="comment">#截取从头开始到倒数第三个字符之前 1234567</span></span><br><span class="line">print(tr1[<span class="number">2</span>]) <span class="comment">#截取第三个字符 3</span></span><br><span class="line">print(tr1[<span class="number">-1</span>]) <span class="comment">#截取倒数第一个字符 0</span></span><br><span class="line">print(tr1[:<span class="number">-1</span>]) <span class="comment">#123456789 </span></span><br><span class="line">print(tr1[::<span class="number">-1</span>]) <span class="comment">#创造一个与原字符串顺序相反的字符串 0987654321 翻转字符串</span></span><br><span class="line">print(tr1[<span class="number">-3</span>:<span class="number">-1</span>]) <span class="comment">#截取倒数第三位与倒数第一位之前的字符 89</span></span><br><span class="line">print(tr1[<span class="number">-3</span>:]) <span class="comment">#截取倒数第三位到结尾 890</span></span><br><span class="line">print(tr1[:<span class="number">-5</span>:<span class="number">-3</span>]) <span class="comment">#逆序截取，具体啥意思没搞明白？ 07</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-15-lower-、upper-、swapcase-、capitalize"><a href="#3-15-lower-、upper-、swapcase-、capitalize" class="headerlink" title="3.15. lower()、upper()、swapcase()、capitalize()"></a>3.15. lower()、upper()、swapcase()、capitalize()</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">S=<span class="string">'abEfeDg'</span></span><br><span class="line">print(S.lower()) <span class="comment">#小写 abefedg</span></span><br><span class="line">print(S.upper()) <span class="comment">#大写 ABEFEDG</span></span><br><span class="line">print(S.swapcase()) <span class="comment">#大小写互换 ABeFEdG</span></span><br><span class="line">print(S.capitalize()) <span class="comment">#首字母大写 Abefedg</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-16-encode、decode"><a href="#3-16-encode、decode" class="headerlink" title="3.16. encode、decode"></a>3.16. encode、decode</h2><p>字符串还有一对编码和解码的函数</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># S.encode([encoding,[errors]])</span></span><br><span class="line"><span class="comment">## 53.1. 其中encoding可以有多种值，</span></span><br><span class="line"><span class="comment">## 53.2. 比如gb2312 gbk gb18030 bz2 zlib big5 bzse64等都支持。</span></span><br><span class="line"><span class="comment">## 53.3. errors默认值为"strict"，意思是UnicodeError。</span></span><br><span class="line"><span class="comment">## 53.4. 可能的值还有'ignore', 'replace', 'xmlcharrefreplace', 'backslashreplace' 和所有的通过codecs.register_error注册的值。</span></span><br><span class="line"><span class="comment">## 53.5. 这一部分内容涉及codecs模块</span></span><br><span class="line">S.decode([encoding,[errors]])</span><br></pre></td></tr></table></figure>
+<h2 id="3-17-startswith、endswith、is"><a href="#3-17-startswith、endswith、is" class="headerlink" title="3.17. startswith、endswith、is"></a>3.17. startswith、endswith、is</h2><p>字符串的测试、判断函数<br>这一类函数在string模块中没有，这些函数返回的都是bool值</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">S.startswith(prefix[,start[,end]])</span><br><span class="line"><span class="comment"># 是否以prefix开头</span></span><br><span class="line">S.endswith(suffix[,start[,end]])</span><br><span class="line"><span class="comment"># 以suffix结尾</span></span><br><span class="line">S.islower() <span class="comment">#S中的字母是否全是小写</span></span><br><span class="line">S.isupper() <span class="comment">#S中的字母是否全是大写</span></span><br><span class="line">S.istitle() <span class="comment">#S是否是首字母大写的</span></span><br><span class="line">S.isspace() <span class="comment">#是否全是空白字符，并至少有一个字符</span></span><br><span class="line">S.isalpha() <span class="comment">#是否全是字母，并至少有一个字符</span></span><br><span class="line">S.isalnum() <span class="comment">#是否全是字母和数字，并至少有一个字符</span></span><br><span class="line">S.isdigit() <span class="comment">#是否全是数字，并至少有一个字符</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-18-atoi、atol、atof"><a href="#3-18-atoi、atol、atof" class="headerlink" title="3.18. atoi、atol、atof"></a>3.18. atoi、atol、atof</h2><p>字符串类型转换函数，这几个函数只在string模块中有</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">string.atoi(s[,base])</span><br><span class="line"><span class="comment"># base默认为10，如果为0,那么s就可以是012或0x23这种形式的字符串，如果是16那么s就只能是0x23或0X12这种形式的字符串</span></span><br><span class="line">string.atol(s[,base]) <span class="comment">#转成long</span></span><br><span class="line">string.atof(s[,base]) <span class="comment">#转成float</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-19-and"><a href="#3-19-and" class="headerlink" title="3.19. and"></a>3.19. and</h2><p>如果为真，则返回左边第一个真值。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sStr1 = <span class="string">'12345678'</span></span><br><span class="line">sStr2 = <span class="string">'ab'</span></span><br><span class="line"><span class="keyword">print</span> (sStr2 <span class="keyword">and</span> sStr1) <span class="comment">## 12345678</span></span><br><span class="line"><span class="keyword">print</span> (sStr1 <span class="keyword">and</span> sStr2) <span class="comment">## ab</span></span><br><span class="line"><span class="keyword">print</span> len(sStr2 <span class="keyword">and</span> sStr1) <span class="comment">## 8</span></span><br><span class="line"><span class="keyword">print</span> len(sStr1 <span class="keyword">and</span> sStr2) <span class="comment">## 2</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-20-for-in-if-in"><a href="#3-20-for-in-if-in" class="headerlink" title="3.20. for in, if in"></a>3.20. for in, if in</h2><p>扫描字符串</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># strpbrk(sStr1,sStr2)</span></span><br><span class="line">sStr1 = <span class="string">'cekjgdklab'</span></span><br><span class="line">sStr2 = <span class="string">'gka'</span></span><br><span class="line">nPos = <span class="number">-1</span></span><br><span class="line"><span class="keyword">for</span> c <span class="keyword">in</span> sStr1:</span><br><span class="line">    print(c)</span><br><span class="line">    <span class="keyword">if</span> c <span class="keyword">in</span> sStr2:</span><br><span class="line">        nPos = sStr1.index(c)</span><br><span class="line">        print(nPos)</span><br><span class="line"><span class="comment">## 57.1. c</span></span><br><span class="line"><span class="comment">## 57.2. e</span></span><br><span class="line"><span class="comment">## 57.3. k</span></span><br><span class="line"><span class="comment">## 57.4. 2</span></span><br><span class="line"><span class="comment">## 57.5. j</span></span><br><span class="line"><span class="comment">## 57.6. g</span></span><br><span class="line"><span class="comment">## 57.7. 4</span></span><br><span class="line"><span class="comment">## 57.8. d</span></span><br><span class="line"><span class="comment">## 57.9. k </span></span><br><span class="line"><span class="comment">## 57.10. index这里永远都是第一次出现的位置</span></span><br><span class="line"><span class="comment">## 57.11. l</span></span><br><span class="line"><span class="comment">## 57.12. a</span></span><br><span class="line"><span class="comment">## 57.13. 8</span></span><br><span class="line"><span class="comment">## 57.14. b</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-21-addslashes-的实现"><a href="#3-21-addslashes-的实现" class="headerlink" title="3.21. addslashes 的实现"></a>3.21. addslashes 的实现</h2><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">addslashes</span><span class="params">(s)</span>:</span></span><br><span class="line">    d = &#123;<span class="string">'"'</span>:<span class="string">'\\"'</span>, <span class="string">"'"</span>:<span class="string">"\\'"</span>, <span class="string">"\0"</span>:<span class="string">"\\\0"</span>, <span class="string">"\\"</span>:<span class="string">"\\\\"</span>&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">''</span>.join(d.get(c, c) <span class="keyword">for</span> c <span class="keyword">in</span> s)</span><br><span class="line"></span><br><span class="line">s = <span class="string">"John 'Johny' Doe (a.k.a. \"Super Joe\")\\\0"</span></span><br><span class="line">print(s)</span><br><span class="line">print(addslashes(s))</span><br></pre></td></tr></table></figure>
+<h2 id="3-22-取字母与数字"><a href="#3-22-取字母与数字" class="headerlink" title="3.22. 取字母与数字"></a>3.22. 取字母与数字</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">OnlyCharNum</span><span class="params">(s)</span>:</span></span><br><span class="line">    s2 = s.lower()</span><br><span class="line">    fomart = <span class="string">'abcdefghijklmnopqrstuvwxyz0123456789'</span></span><br><span class="line">    <span class="keyword">for</span> c <span class="keyword">in</span> s2:</span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> c <span class="keyword">in</span> fomart:</span><br><span class="line">            s = s.replace(c,<span class="string">''</span>)</span><br><span class="line">    <span class="keyword">return</span> s</span><br><span class="line">print(OnlyCharNum(<span class="string">"a000 	Aaa-b"</span>)) <span class="comment">## a000Aaab</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="3-23-说明"><a href="#3-23-说明" class="headerlink" title="3.23. 说明"></a>3.23. 说明</h2><h3 id="3-23-1-字符串对象是不可改变的"><a href="#3-23-1-字符串对象是不可改变的" class="headerlink" title="3.23.1. 字符串对象是不可改变的"></a>3.23.1. 字符串对象是不可改变的</h3><p>也就是说在python创建一个字符串后，你不能把这个字符中的某一部分改变。<br>任何上面的函数改变了字符串后，都会返回一个新的字符串，原字串并没有变。</p>
+<h3 id="3-23-2-也有变通的办法的"><a href="#3-23-2-也有变通的办法的" class="headerlink" title="3.23.2. 也有变通的办法的"></a>3.23.2. 也有变通的办法的</h3><p>可以用S=list(S)这个函数把S变为由单个字符为成员的list.<br>这样的话就可以使用S[3]=’a’的方式改变值，然后再使用S=” “.join(S)还原成字符串</p>
+<h1 id="4-特殊方法"><a href="#4-特殊方法" class="headerlink" title="4. 特殊方法"></a>4. 特殊方法</h1><p>面向对象编程的类中具有特殊意义的方法<br>方法名|含义<br>–|–<br><strong>init</strong>()|初始化，进行初始化操作<br><strong>del</strong>()|在对象消失前一刻用的<br><strong>len</strong>()|对对象执行len()函数调用时，自动触发。一般用于设置对象长度。’’’def <strong>len</strong>(self): return’’’ 一个类的预设的长度<br><strong>str</strong>()|对对象使用print()或str()时被自动调用，返回字符串</p>
+<h1 id="5-数据库"><a href="#5-数据库" class="headerlink" title="5. 数据库"></a>5. 数据库</h1><h2 id="5-1-pymysql"><a href="#5-1-pymysql" class="headerlink" title="5.1. pymysql"></a>5.1. pymysql</h2><blockquote>
+<ul>
+<li><a href="https://www.apachefriends.org/zh_cn/index.html" target="_blank" rel="noopener">xampp</a></li>
+</ul>
+</blockquote>
+<ul>
+<li><code>pip install pymysql --user</code></li>
+<li>/xampp/phpMyadmin，打开config.inc.php文件，查看MySQL配置的用户和密码</li>
+</ul>
+<p>参考教程：</p>
+<blockquote>
+<ul>
+<li>菜鸟教程：<a href="http://www.runoob.com/python3/python3-mysql.html" target="_blank" rel="noopener">mysql</a> 、<a href="http://www.runoob.com/python3/python-mysql-connector.html" target="_blank" rel="noopener">mysql-connector</a></li>
+</ul>
+</blockquote>
+<ul>
+<li><a href="https://dev.mysql.com/doc/refman/8.0/en/mysql-internals.html" target="_blank" rel="noopener">MySQL官方文档</a></li>
+</ul>
+<h2 id="5-2-错误处理"><a href="#5-2-错误处理" class="headerlink" title="5.2. 错误处理"></a>5.2. 错误处理</h2><p>DB API中定义了一些数据库操作的错误及异常，下表列出了这些错误和异常:</p>
+<table>
+<thead>
+<tr>
+<th>异常</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Warning</td>
+<td>当有严重警告时触发，例如插入数据是被截断等等。必须是 StandardError 的子类。</td>
+</tr>
+<tr>
+<td>Error</td>
+<td>警告以外所有其他错误类。必须是 StandardError 的子类。</td>
+</tr>
+<tr>
+<td>InterfaceError</td>
+<td>当有数据库接口模块本身的错误（而不是数据库的错误）发生时触发。 必须是Error的子类。</td>
+</tr>
+<tr>
+<td>DatabaseError</td>
+<td>和数据库有关的错误发生时触发。 必须是Error的子类。</td>
+</tr>
+<tr>
+<td>DataError</td>
+<td>当有数据处理时的错误发生时触发，例如：除零错误，数据超范围等等。 必须是DatabaseError的子类。</td>
+</tr>
+<tr>
+<td>OperationalError</td>
+<td>指非用户控制的，而是操作数据库时发生的错误。例如：连接意外断开、 数据库名未找到、事务处理失败、内存分配错误等等操作数据库是发生的错误。 必须是DatabaseError的子类。</td>
+</tr>
+<tr>
+<td>IntegrityError</td>
+<td>完整性相关的错误，例如外键检查失败等。必须是DatabaseError子类。</td>
+</tr>
+<tr>
+<td>InternalError</td>
+<td>数据库的内部错误，例如游标（cursor）失效了、事务同步失败等等。 必须是DatabaseError子类。</td>
+</tr>
+<tr>
+<td>ProgrammingError</td>
+<td>程序错误，例如数据表（table）没找到或已存在、SQL语句语法错误、 参数数量错误等等。必须是DatabaseError的子类。</td>
+</tr>
+<tr>
+<td>NotSupportedError</td>
+<td>不支持错误，指使用了数据库不支持的函数或API等。例如在连接对象上 使用.rollback()函数，然而数据库并不支持事务或者事务已关闭。 必须是DatabaseError的子类。</td>
+</tr>
+</tbody></table>
+<h2 id="5-3-OperationalError-1045-“Access-denied-for-user-‘testuser’-’localhost’-using-password-YES-”"><a href="#5-3-OperationalError-1045-“Access-denied-for-user-‘testuser’-’localhost’-using-password-YES-”" class="headerlink" title="5.3. OperationalError: (1045, “Access denied for user ‘testuser’@’localhost’ (using password: YES)”)"></a>5.3. OperationalError: (1045, “Access denied for user ‘testuser’@’localhost’ (using password: YES)”)</h2><p>数据库连接错误，如何添加密码</p>
+<h1 id="6-样式"><a href="#6-样式" class="headerlink" title="6. 样式"></a>6. 样式</h1><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Python代码块：</span></span><br><span class="line">&gt;&gt;&gt;<span class="keyword">import</span> nltk</span><br><span class="line">&gt;&gt;&gt;<span class="keyword">import</span> numpy</span><br><span class="line"></span><br><span class="line"><span class="comment"># 一般性的代码块：</span></span><br><span class="line"></span><br><span class="line">add FILE vectorizer.pkl;</span><br><span class="line">add FILE classifier.pkl;</span><br><span class="line"></span><br><span class="line"><span class="comment"># Scrapy shell中的IPython 记法，其样式如下：</span></span><br><span class="line"></span><br><span class="line">In [<span class="number">1</span>] : sel.xpath(<span class="string">'//title/text()'</span>)</span><br><span class="line">Out[<span class="number">1</span>]: [&lt;Selector xpath=<span class="string">'//title/text()'</span> data=<span class="string">u' Google News'</span>&gt;]</span><br><span class="line"></span><br><span class="line"><span class="comment"># 所有命令行输入或输出信息的样式：</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># cp /usr/src/asterisk-addons/configs/cdr_mysql.conf.sample</span></span><br><span class="line"><span class="comment"># /etc/asterisk/cdr_mysql.conf</span></span><br></pre></td></tr></table></figure>
+<h1 id="7-列表"><a href="#7-列表" class="headerlink" title="7. 列表"></a>7. 列表</h1><p>Python列表</p>
+<p>定义：相关数据的集合。数据的一种保存形式（相对于变量）。<br>索引:<code>list[0]</code>、<code>list[-1]</code><br>申明：<code>[]</code>,英文逗号隔开。<br>空列表（初始化）：<code>list1=[]</code><br>增：<code>list1.append(&#39;a&#39;)</code><br>删：del list1[i]<br>改: 直接list[i]=newdata<br>切片: list[m:n:i] 左闭右开,i为步距。m省略的话，默认为0。n:-1。i:1</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">myList=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="string">'hello'</span>]</span><br><span class="line">print(myList)</span><br><span class="line">print(myList[<span class="number">2</span>])</span><br><span class="line">print(myList[<span class="number">-1</span>])</span><br><span class="line">myList[<span class="number">1</span>]=<span class="number">20</span></span><br><span class="line">print(myList)</span><br><span class="line">myList.append(<span class="number">6</span>)</span><br><span class="line">print(myList)</span><br><span class="line"><span class="keyword">del</span> myList[<span class="number">5</span>]</span><br><span class="line">print(myList)</span><br><span class="line"><span class="comment"># [1, 2, 3, 4, 5, 'hello']</span></span><br><span class="line"><span class="comment"># 3</span></span><br><span class="line"><span class="comment"># hello</span></span><br><span class="line"><span class="comment"># [1, 20, 3, 4, 5, 'hello']</span></span><br><span class="line"><span class="comment"># [1, 20, 3, 4, 5, 'hello', 6]</span></span><br><span class="line"><span class="comment"># [1, 20, 3, 4, 5, 6]</span></span><br></pre></td></tr></table></figure>
+<h1 id="8-字典"><a href="#8-字典" class="headerlink" title="8. 字典"></a>8. 字典</h1><p>列表和元组是数据集合。字典是键值对集合。<br>字典键重合的问题。字典的改和增。<br>列表和元组的索引对应字典的键。<br>键为数字的字典。<br>字典除了用{}申明外，还可以用dict()申明，用<code>dict()</code>时，键不能带引号。否则报错 <code>SyntaxError: keyword can&#39;t be an expression</code><br>学习，思考，应用，校正。人做事情，都需要有个反馈，反馈的周期越久，感觉上就越困难。很多大事情，都是由一个个小事务重复或迭代而成，每个小事务中，包含了反馈和校正<br>列表和元组形式上是[]、()的区别。元组的值不能修改。<br>定义：数据对集合。<br>申明：字典的关键字必须是唯一的。不能重复。但申明时不会报错。后面的键值对会自动覆盖前面的同名键值对。<br>        <code>{}</code>没写而且没调用<code>dict</code>函数会报错<code>SyntaxError: invalid syntax</code></p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 重复的键</span></span><br><span class="line">myDic=&#123;<span class="string">'one'</span>:<span class="number">1</span>,<span class="string">'two'</span>:<span class="number">2</span>,<span class="string">'two'</span>:<span class="number">3</span>&#125; <span class="comment">#重复的键自动覆盖，和字典改数据一个理</span></span><br><span class="line">print(len(myDic)) <span class="comment"># 2</span></span><br><span class="line">print(myDic) <span class="comment"># &#123;'one': 1, 'two': 3&#125;</span></span><br><span class="line"><span class="comment"># &#123;&#125;申明</span></span><br><span class="line">myDic1=&#123;<span class="string">'one'</span>:<span class="number">1</span>,<span class="string">'two'</span>:<span class="number">2</span>,<span class="string">'three'</span>:<span class="number">3</span>&#125; <span class="comment">#键也可以是数字</span></span><br><span class="line">print(myDic1)  <span class="comment"># &#123;'one': 1, 'two': 2, 'three': 3&#125;</span></span><br><span class="line"><span class="comment"># dict()申明</span></span><br><span class="line">myDic2=dict(one=<span class="number">1</span>,two=<span class="number">2</span>,three=<span class="number">3</span>) <span class="comment">#dict函数申明时建不能带引号，否则报错 SyntaxError: keyword can't be an expression</span></span><br><span class="line">print(myDic2) <span class="comment">#&#123;'one': 1, 'two': 2, 'three': 3&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="8-1-查"><a href="#8-1-查" class="headerlink" title="8.1. 查"></a>8.1. 查</h2><p>dicName[‘keyName’]</p>
+<h2 id="8-2-改"><a href="#8-2-改" class="headerlink" title="8.2. 改"></a>8.2. 改</h2><p>dicName[‘keyName’]=newData</p>
+<h2 id="8-3-增"><a href="#8-3-增" class="headerlink" title="8.3. 增"></a>8.3. 增</h2><p>dicName[‘keyName’]=newData</p>
+<h2 id="8-4-删"><a href="#8-4-删" class="headerlink" title="8.4. 删"></a>8.4. 删</h2><p>del dicName[‘keyName’]</p>
+<h1 id="9-安装"><a href="#9-安装" class="headerlink" title="9. 安装"></a>9. 安装</h1><h2 id="9-1-Python3-in-Ubuntu"><a href="#9-1-Python3-in-Ubuntu" class="headerlink" title="9.1. Python3 in Ubuntu"></a>9.1. Python3 in Ubuntu</h2><p>apt list –installed | grep python<br>sudo apt-get update<br>sudo apt-get upgrade python3<br>sudo apt install python3-pip<br>sudo apt-get install build-essential libssl-dev libffi-dev python-dev<br>pip3 -V<br>sudo apt install -y python3-venv<br>mkdir wx<br>cd wx<br>python3 -m venv wx<br>ls wx<br>source wx/bin/activate<br>vim hello.py<br>i(Escape)<br>zz<br>:wq</p>
+<p>pip3 install flask<br>python3 hello.py</p>
+<p><a href="https://stackoverflow.com/questions/38298652/permissionerror-errno-13-permission-denied-flask-run" target="_blank" rel="noopener">https://stackoverflow.com/questions/38298652/permissionerror-errno-13-permission-denied-flask-run</a>  change port to 5000(tencent denies port 80)<br><a href="https://vitux.com/install-python3-on-ubuntu-and-set-up-a-virtual-programming-environment/" target="_blank" rel="noopener">https://vitux.com/install-python3-on-ubuntu-and-set-up-a-virtual-programming-environment/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://cjql.github.io/en/2011/12/12/Python%E7%9F%A5%E8%AF%86%E7%BB%93%E6%9E%84/" data-id="ck4vcadg70013b0vx6mxp2b02" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/en/2016/12/25/Docker/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Docker
+        
+      </div>
+    </a>
+  
+  
+    <a href="/en/2006/12/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">计算机基础</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/en/categories/00%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">00学习方法</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/00%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/00%E5%85%A8%E6%99%AF/">00全景</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/00%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Web/">Web</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Web/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Web/Python/">Python</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Web/Python/Flask/">Flask</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%9F%BA%E7%A1%80/">基础</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%9F%BA%E7%A1%80/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%B7%A5%E5%85%B7/">工具</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%88%AC%E8%99%AB/">爬虫</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%88%AC%E8%99%AB/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%AE%97%E6%B3%95/">算法</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E9%BB%91%E5%AE%A2/">黑客</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%B5%84%E6%BA%90/">资源</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2100/12/">十二月 2100</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2099/12/">十二月 2099</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2018/12/">十二月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2017/12/">十二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2016/12/">十二月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2011/12/">十二月 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2006/12/">十二月 2006</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/1980/12/">十二月 1980</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/1979/12/">十二月 1979</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/en/2100/12/31/%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86%E6%9C%AF%E8%AF%AD%E8%A1%A8/">知识整理术语表</a>
+          </li>
+        
+          <li>
+            <a href="/en/2100/12/12/cs_learning_path/">cs_learning_path</a>
+          </li>
+        
+          <li>
+            <a href="/en/2100/12/12/%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A8/">代码大全</a>
+          </li>
+        
+          <li>
+            <a href="/en/2099/12/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+          </li>
+        
+          <li>
+            <a href="/en/2018/12/25/Flask%E8%AF%AD%E6%B3%95%E9%87%8A%E4%B9%89/">Flask语法释义</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 CJ<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  <div class="goBack" onclick="window.scrollTo('0','0')"></div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/en/" class="mobile-nav-link">Home</a>
+  
+    <a href="/en/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/en/fancybox/jquery.fancybox.css">
+
+  
+<script src="/en/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/en/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

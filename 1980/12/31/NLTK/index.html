@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>NLTK | 千灵镜</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="读书笔记：NLTK基础教程——用NLTK和Python库构建机器学习应用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NLTK">
+<meta property="og:url" content="https://cjql.github.io/en/1980/12/31/NLTK/index.html">
+<meta property="og:site_name" content="千灵镜">
+<meta property="og:description" content="读书笔记：NLTK基础教程——用NLTK和Python库构建机器学习应用。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-6c01a13213e00401.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/6908911-5c1a13d8bdc6e418.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="article:published_time" content="1980-12-30T17:23:47.000Z">
+<meta property="article:modified_time" content="2020-01-01T08:00:38.204Z">
+<meta property="article:author" content="CJ">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/6908911-6c01a13213e00401.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+  
+    <link rel="alternate" href="/en/atom.xml" title="千灵镜" type="application/atom+xml">
+  
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/en/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/en/" id="logo">千灵镜</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/en/" id="subtitle">神驰八极，心游万仞</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/en/">Home</a>
+        
+          <a class="main-nav-link" href="/en/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/en/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://cjql.github.io/en"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-NLTK" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/en/1980/12/31/NLTK/" class="article-date">
+  <time datetime="1980-12-30T17:23:47.000Z" itemprop="datePublished">1980-12-31</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a>►<a class="article-category-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      NLTK
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      <!-- Table of Contents -->
+      
+        <p>读书笔记：NLTK基础教程——用NLTK和Python库构建机器学习应用。</p>
+<a id="more"></a>
+<h1 id="书目"><a href="#书目" class="headerlink" title="书目"></a>书目</h1><h2 id="扩展阅读"><a href="#扩展阅读" class="headerlink" title="扩展阅读"></a>扩展阅读</h2><p>NLP入门（前几章）<br>《Speech and Language Processing》，由Daniel Jurafsky与James H. Martin合著。<br>《Statistical Natural Language Processing》，由Christopher D. Manning与Hinrich Schütze合著<br>维基百科上与NLP相关的页面。<a href="https://en.wikipedia.org/wiki/NLP" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/NLP</a></p>
+<h1 id="残留"><a href="#残留" class="headerlink" title="残留"></a>残留</h1><p>help()是不是只能用于str和list。<br>答：否。dir(dict)以及import后再help。</p>
+<h1 id="最"><a href="#最" class="headerlink" title="最"></a>最</h1><p>NLTK 库是当前自然语言处理（NLP）领域最为流行、使用最为广泛的库之一, 同时Python语言也已逐渐成为主流的编程语言之一。<br>关于这个问题，我们可以先来看看Gartner公司新一轮的趋势报告，你可以很清晰地看到，NLP技术赫然高居榜首。目前，NLP已被认为是业界最为稀缺的技能之一。<br>列表（list）是Python中最常用的数据结构之一。它们基本上相当于其他编程语言中的数组。<br>字典（dictionary）也是最常用到的数据结构之一。在其他编程语言中有时也被称为关联数组/存储。<br>字符串操作同时也是Python最主要的特性之一。</p>
+<ul>
+<li>在Python中，处理字符串会是一件非常轻松的工作。即使是那些非常简单的操作，例如字符串的切割，你也会看到相较于Java和C的大费周章，它在Python中是多么得简单明了。<h1 id="练级"><a href="#练级" class="headerlink" title="练级"></a>练级</h1>兴趣读者、爱好者、资深程序员、领域的研究人员、数据科学家。掌握一些NLP技能的人员。<h1 id="掌握技能"><a href="#掌握技能" class="headerlink" title="掌握技能"></a>掌握技能</h1><h2 id="理论：快速了解与一定的兴趣"><a href="#理论：快速了解与一定的兴趣" class="headerlink" title="理论：快速了解与一定的兴趣"></a>理论：快速了解与一定的兴趣</h2>编程语言、NLTK、NLP和语言学<br>python：基础教程、快速概览、快速浏览一下Python的基础要点（基础性的快速回顾之旅）、不同主题的Python的一些特性。基本的Python知识，如列表、字符串、正则表达式以及基本的I/O操作。<br><a href="#help">help and dir</a> <a href="#列表">列表</a><br>数据结构的基本知识，常用函数，Python通用结构。<br>对NLP爱好者来说，正则表达式是另一个非常重要的技能。<br>NLP：背景知识、相关概念、实用方面<h3 id=""><a href="#" class="headerlink" title=""></a></h3>在NLP领域以及使用Python编程方面具有一定的背景知识<br>与Python和NLP相关的快速入门<br>详细地了解Python这门语言<br>NLP相关的基本概念<br>与处理自然语言相关的特性<br>基本的NLP预处理步骤<h2 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h2>如何安装所需要的库。完成Python和NLTK及其他库的安装。安装了所有在NLTK工作中将会用到的程序。<br>pip install BeautifulSoup4 –user<br>演示了NLTK的使用思路<br>编写一些非常基本的Python和NLTK代码片段。能编写并运行基本的Python程序。<br>自行构建出一个能实际运行的、涉及云词的小型应用程序。<br>开始构建一个非常基本的单词云实例。能顺利地产生出云词。<br>如何构建一些NLP应用。构建出大部分与数据科学相关问题的单点解决方案。<br>围绕着NLTK构建起所需要的一切，并让Python在我们的系统上顺利地工作。<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2>探索性数据分析（EDA）。<br>通常对于一段文本域而言，EDA可能包含了多重含义。<br>文档的主体术语类型是其中的一个简单用例。<br>主题是什么？<br>它们的出现频率如何？<br>整个分析过程还会或多或少地涉及一些预处理层面的步骤。<br>试着先用纯Python的方式来实现它，然后用NLTK再将其实现一次。<br>清理掉html标签。<br>一种可行的做法是只选取其中的标记，包括数字和字符。<br>正则表达式可以轻松地将这些html字符串转换成一个标记列表。</li>
+</ul>
+<h1 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h1><p>NLTK、文本处理、NLP、机器学习、数据科学领域<br>信息检索、分布式处理、本体开发、自然语言处理和机器学习<br>NLTK库与Python库。其他的Python库，你应该了解一下这些与文本挖掘或自然语言处理任务相关的库。<br>NLP任务和机器学习应用<br>通用的预处理技术、专属于NLP领域的预处理技术以及命名实体识别技术<br>文本分类、数据科学和数据处理、社交媒体挖掘和大规模文本挖掘<br>标识化处理、语块分解、词性标注、语法解析、机器翻译及语音识别<br>语言处理及大型非结构化数据<br>一些相关特定能力的Python库，如NLTK、scikit-learn、panda和NumPy<br>基础数据科学、机器学习起步<br>文本分析、网页抓取及检索、人力资源分析、虚拟系统的性能优化，以及气候变化的预测<br>路径名、文件夹名、文件名、文件扩展名、伪URL<br>数据库表名<br>用户输入以及Twitter句柄、代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">文本的歧义及其清理</span><br><span class="line">    通用的预处理技术。在任何文本挖掘和NLP任务中所需的所有预处理步骤。</span><br><span class="line">        断词处理、词干处理、停用词去除。</span><br><span class="line">        例如标识化处理（tokenization）、词干提取（stemming）、停用词（stop word）去除；</span><br><span class="line">        本清理技术，如何用NLTK来简化它们的实现。</span><br><span class="line">    专属于NPL领域的预处理技术等，</span><br><span class="line">        如词性标注（part-of-speech tagging）；以及大多数文本相关的NLP任务都会涉及的命名实体识别（Named-entity recognition，简称NER）等技术。</span><br><span class="line">    更为复杂的NLP任务上，例如语法解析（parsing）以及其他NLP应用。</span><br><span class="line">    NLP应用:</span><br><span class="line">        如何进行文本分类，可以用NLTK搭配scikit-learn库来进行。</span><br><span class="line">        如何从网页和社交媒体中采集数据</span><br><span class="line">        如何用NLTK进行大规模的文本处理</span><br><span class="line">自然语言处理简介</span><br></pre></td></tr></table></figure>
+
+<h1 id="词条"><a href="#词条" class="headerlink" title="词条"></a>词条</h1><p>解释型编程语言，会在对其表达式进行计算的同时检查其中的变量类型。在声明变量时无需对其进行初始化和类型声明。例如：Python。<br>对语言有深入研究的人通常被叫作语言学家。<br>而“计算机语言学家”这个专用名词则指的是将计算机科学应用于语言处理领域的人。<br>因此从本质上来说，一个计算机语言学家应该既有足够的语言理解能力，同时还可以用其计算机技能来模拟出语言的不同方面。<br>虽然计算机语言学家主要研究的是语言处理理论，但NLP无疑是对计算机语言学的具体应用。</p>
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><p>字典是一种键值索引型的数据结构，其索引键可以是任意一种不可变的类型，例如字符串和数字都经常被用来充当索引键。<br>字典是被多种编程语言广泛用于实现诸多算法的一种非常便利的数据结构。<br>而且，Python的字典结构还是所有的这些编程语言中最为优雅的哈希表实现之一。</p>
+<h2 id="哈希表"><a href="#哈希表" class="headerlink" title="哈希表"></a>哈希表</h2><p>哈希表是一种操作起来非常容易的字典结构，其优势在于，你只需通过寥寥几段代码就可以用它建立起一个非常复杂的数据结构。</p>
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>而所有类似于其他编程语言中的参数和参数类型的声明都会被放在该括号内。Python也有自己的函数编写方式。<br>从大型程序的编写实践来说，使用函数/类和某种成熟的编程范式是一个更佳的做法。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> &lt;函数名&gt;<span class="params">()</span>:</span></span><br></pre></td></tr></table></figure>
+<p>在Python中，<br>    函数的定义通常会从关键字def开始，<br>    后面紧跟着相应的函数名和括号()。<br>    实际代码部分将会从冒号（:）后面开始，<br>        代码的初始行通常会是一个文档字符串（注释），<br>        接着是代码的主体部分，<br>        最后我们会以一个return语句来结束整个函数。</p>
+<h2 id="NLP"><a href="#NLP" class="headerlink" title="NLP"></a>NLP</h2><p>在英语环境中，语言处理研究这一领域通常被简称为NLP。<br>NLP多数情况下指的是计算机上各种大同小异的语言处理应用，以及用NLP技术所构建的实际应用程序。<br>在实践中，NLP与教孩子学语言的过程非常类似。<br>其大多数任务（如对单词、语句的理解，形成语法和结构都正确的语句等）对于人类而言都是非常自然的能力。<br>但对于NLP来说，其中有一些任务就必须要转向<a href="#分类">文本分析</a><br>等这些领域的一部分，且这些任务有一大部分还仍是当前计算机领域中非常棘手的挑战。<br>自大数据的概念问世之后，我们所面对的主要挑战是——业界需要越来越多不仅能处理结构化数据，同时也能处理半结构化或非结构化数据的人才。<br>对于我们所生产出来的那些博客、微博、Facebook订阅、聊天信息、E-mail以及网络评论等，各公司都在致力于收集所有不同种类的数据，以便建立更好的客户针对性，形成有意义的见解。<br>而要想处理所有的这些非结构化数据源，我们就需要掌握一些NLP技能的人员。</p>
+<h3 id="NLP工具清单"><a href="#NLP工具清单" class="headerlink" title="NLP工具清单"></a>NLP工具清单</h3><p>这些工具有些是由相关组织在建立自己的NLP应用时开发的，而有些则纯粹属于开源项目：<br>    GATE。<br>    Mallet。<br>    Open NLP。<br>    UIMA。<br>    Stanford toolkit。<br>    Genism。<br>    Natural Language Tool Kit (NLTK)<br>上述大多数工具都是用Java编写的，在功能上也都很相似。强大实用。</p>
+<h3 id="现实应用"><a href="#现实应用" class="headerlink" title="现实应用"></a>现实应用</h3><p>拼写校正（MS Word/其他编辑器）<br>搜索引擎（Google、Bing、Yahoo!、WolframAlpha）。<br>语音引擎（Siri、Google Voice）。<br>垃圾邮件分类（所有电子邮件服务）。垃圾过滤器来过滤垃圾邮件<br>新闻订阅（Google、Yahoo!等）。<br>机器翻译（Google翻译与其他类似服务）。<br>IBM Watson<br>最基本的事情用到Siri</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/6908911-6c01a13213e00401.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h2 id="停用词"><a href="#停用词" class="headerlink" title="停用词"></a>停用词</h2><p>无用词。由于冠词、代词在大多数文档中都是普遍存在的，因而对信息的识别没有帮助。<br>a an the<br>of for =<br>在大多数NLP及信息检索任务中，人们通常都会先删除掉这些停用词。</p>
+<h2 id="NLTK"><a href="#NLTK" class="headerlink" title="NLTK"></a>NLTK</h2><p>NLTK的设计充分体现了简单的魅力。也就是说，对于大多数复杂的NLP任务，它都可以用寥寥几行代码来实现。<br>NLTK：易用性（NLTK库是一个非常易学的工具包）和其对相关概念的解释度。<br>这得益于Python本身非常平缓的学习曲线（毕竟NLTK是用它编写的），人们学习起来会非常快。<br>NLTK库中收纳了NLP领域中的绝大部分任务，它们都被实现得非常优雅，且易于使用。<br>正是出于上述的这些原因，NLTK如今已成为了NLP社区最流行的库之一。</p>
+<h2 id="图灵测试"><a href="#图灵测试" class="headerlink" title="图灵测试"></a>图灵测试</h2><p>图灵测试关注的是人机对话能力，换句话说，什么时候机器能通过对话骗到你的一百块钱，也比它下棋下赢世界冠军更智能点。而想要增强人机对话能力，自然语言处理就是首当其冲的一个领域了。正如我们所说，机器的专长是数学领域，所以自然语言处理问题的目的就是要把我们人类的文本、音频转换成可被分析的数学模型，这对于机器来说是比围棋困难得多的事情。这也是人类和机器的根本区别，对于这两种智能来说，困难的定义是截然不同的。</p>
+<h2 id="人物"><a href="#人物" class="headerlink" title="人物"></a>人物</h2><h3 id="Nitin-Hardeniya"><a href="#Nitin-Hardeniya" class="headerlink" title="Nitin Hardeniya"></a>Nitin Hardeniya</h3><p>Nitin Hardeniya数据科学家，拥有4年以上从业经验，期间分别任职于Fidelity、Groupon和[24]7等公司，其业务横跨各个不同的领域。此外，他还拥有IIIT-H的计算语言学硕士学位，并且是5项客户体验专利的作者。<br>他热衷于研究语言处理及大型非结构化数据，至少拥有5年日常使用Python的工作经验。他相信，用Python可以构建出大部分与数据科学相关问题的单点解决方案。<br>他将自己写这本书的经历看成是自己职业生涯的众多荣誉之一，希望用一种非常简单的形式为人们介绍与NLP和机器学习相关的、所有的这些复杂工具。在这本书中，他为读者提供了一种变通方法，即使用一些相关特定能力的Python库，如NLTK、scikit-learn、panda和NumPy等。<br>《NLTK基础教程——用NLTK和Python库构建机器学习应用》作者</p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>审阅者简介Afroz Hussain数据科学家，目前在PredictifyMe公司从事与美国基础数据科学、机器学习起步相关的研究。他在数据科学领域拥有丰富的项目经验、多年使用Python、scikit-learn，以及基于NLTK进行文本挖掘的工作经历。他拥有10年以上的编程经验以及与数据分析和商业智能项目相关的软件开发经验。此外，他还通过在线课程以及参加Kaggle比赛等活动，获得了不少数据科学领域的新技能。<br>Sujit Pal目前就职于[[Elsevier实验室]]，这是一个包含了[[Reed-Elsevier PLC工作组]]在内的研发团队。他的兴趣主要集中在信息检索、分布式处理、本体开发、自然语言处理和机器学习这几个领域。而且，他也很喜欢用Python、Scala和Java来编写自己的代码。他充分整合了自己在这些方面的技能，帮助公司改进了不同产品的一些特性并构建了一些新特性。他深信自己需要终身学习，并且也在博客：sujitpal.blogspot.com中分享其经验。<br>Kumar Raj第二代数据科学家，目前就职于惠普软件的研发部门，为其提供相关的解决方案。在那里，他主要负责开发以惠普软件产品为核心的分析层。他毕业于印度理工学院Kharagpur技术分校，并具有两年以上各种大数据分析领域的工作经验，涉及文本分析、网页抓取及检索、人力资源分析、虚拟系统的性能优化，以及气候变化的预测等</p>
+<h1 id="需要累积"><a href="#需要累积" class="headerlink" title="需要累积"></a>需要累积</h1><p>N年使用Python的工作经验经历<br>在数据科学领域拥有丰富的项目经验<br>编程经验<br>数据分析和商业智能项目相关的软件开发经验<br>充分整合了自己的技能<br>帮助公司改进了不同产品的一些特性并构建了一些新特性</p>
+<h1 id="社会现象"><a href="#社会现象" class="headerlink" title="社会现象"></a>社会现象</h1><p>说来也凑巧，在我签下这本书的翻译合同时，这个世界好像还不知道AlphaGo的存在。而在我完成这本书的翻译之时，Master已经对人类顶级高手连胜60局了。至少从媒体的热度来看，的确在近几年，人工智能似乎是越来越火了。其原因是Google在汽车驾驶和围棋这两个领域的项目得到了很好的进展和宣传，而这两个领域在过去被很多人想当然地认为是人类的专属领域。因此在专属领域接连被突破情况下，一些人得了“机器恐惧症”。例如高晓松先生的这段微博：</p>
+<blockquote>
+@高晓松　
+作为自幼学棋，崇拜国手的业余棋手，看了Master50 : 0横扫中日韩顶尖高手的对局，难过极了。为所有的大国手伤心，路已经走完了。多少代大师上下求索，求道求术，全被破解。未来一个八岁少年只要一部手机就可以战胜九段，荣誉信仰灰飞烟灭。等有一天，机器做出了所有的音乐和诗歌，我们的路也会走完。
+1月4日　16:21　来自　iPhone 7 Plus
+</blockquote>
+其实之所以会有这样恐惧，大部分是因为人们在讨论人工智能的时候容易将机器“人格化”，很多科幻作品就是这么干的，这看起来很合理，但问题是机器无论如何都不是人。对于机器来说，围棋说穿了不过是一种基于统计学概率的决策模型，属于数学领域的问题，它本来就是机器的强项。用围棋对于人类的难度来推导机器智能的进步，其实是很没有逻辑的事情。而且事实上，今天所流行的这些人工智能方法都是在20世纪70年代前后提出的理论，今天的辉煌主要是由于硬件的进步为实现提供了基础，但在智能上并没有多大的实质突破。要知道，人们对于鉴定人工智能的主要标准早有定论，那就是图灵测试
+
+<h1 id="套话"><a href="#套话" class="headerlink" title="套话"></a>套话</h1><p>众所周知，语言是人们日常生活的核心部分，任何与语言问题相关的工作都会显得非常有意思。希望这本书能带你领略到NLP的风采，并引起学习NLP的兴趣。首先，我们需要来了解一下该领域中的一些令人惊叹的概念，并在工作中实际尝试一些具有挑战性的NLP应用。<br>身处信息时代，我们甚至不能想象生活中没有Google会是什么样子。<br>在这里，我们可以再列举一些令人惊叹的NLP应用实例。<br>构建上述这些应用都需要非常具体的技能，需要优秀的语言理解能力和能有效处理这些语言的工具。因此，这些不仅是各NLP最具优势领域的未来趋势，同时也是我们用NLP这种最独特技能所能创建的应用种类</p>
+<h3 id="词频统计"><a href="#词频统计" class="headerlink" title="词频统计"></a>词频统计</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">str1=<span class="string">'Hello Python. I like Python.'</span></span><br><span class="line">word_freq=&#123;&#125;</span><br><span class="line"><span class="keyword">for</span> tok <span class="keyword">in</span> str1.split():</span><br><span class="line">    <span class="keyword">if</span> tok <span class="keyword">in</span> word_freq:</span><br><span class="line">        word_freq[tok]+=<span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        word_freq[tok]=<span class="number">1</span></span><br><span class="line">print(word_freq)</span><br><span class="line">&gt;&gt;&gt;</span><br><span class="line">&#123;<span class="string">'Hello'</span>: <span class="number">1</span>, <span class="string">'Python.'</span>: <span class="number">2</span>, <span class="string">'I'</span>: <span class="number">1</span>, <span class="string">'like'</span>: <span class="number">1</span>&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="要点："><a href="#要点：" class="headerlink" title="要点："></a>要点：</h4><p><code>for tok in str1.split():</code> 注意in 后面接了个返回列表的函数。<br><code>if tok in word_freq:</code> 键是如何作用于字典的。<br><code>word_freq[tok]+=1</code> 字典是如何用键操作值的。</p>
+<h3 id="函数式统计词频"><a href="#函数式统计词频" class="headerlink" title="函数式统计词频"></a>函数式统计词频</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">wordfreq</span><span class="params">(str1)</span>:</span></span><br><span class="line">    word_freq=&#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> tok <span class="keyword">in</span> str1.split():</span><br><span class="line">        <span class="keyword">if</span> tok <span class="keyword">in</span> word_freq:</span><br><span class="line">            word_freq[tok]+=<span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            word_freq[tok]=<span class="number">1</span></span><br><span class="line">    print(word_freq)</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    str1=<span class="string">'Hello Python. I like Python.'</span></span><br><span class="line">    wordfreq(str1)</span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<p>等价于</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">wordfreq</span><span class="params">(str1)</span>:</span></span><br><span class="line">    word_freq=&#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> tok <span class="keyword">in</span> str1.split():</span><br><span class="line">        <span class="keyword">if</span> tok <span class="keyword">in</span> word_freq:</span><br><span class="line">            word_freq[tok]+=<span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            word_freq[tok]=<span class="number">1</span></span><br><span class="line">    print(word_freq)</span><br><span class="line">str1=<span class="string">'Hello Python. I like Python.'</span></span><br><span class="line">wordfreq(str1)</span><br></pre></td></tr></table></figure>
+<h3 id="python官网网站源码"><a href="#python官网网站源码" class="headerlink" title="python官网网站源码"></a>python官网网站源码</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">HtmlText</span><span class="params">(url0)</span>:</span></span><br><span class="line">    html0 = requests.get(url).text</span><br><span class="line">    <span class="keyword">return</span> html0</span><br><span class="line">url=<span class="string">'http://python.org/'</span></span><br><span class="line">html = HtmlText(url)</span><br><span class="line">print(html)</span><br></pre></td></tr></table></figure>
+<h3 id="清理数据"><a href="#清理数据" class="headerlink" title="清理数据"></a>清理数据</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">HtmlText</span><span class="params">(url0)</span>:</span></span><br><span class="line">    html0 = requests.get(url).text</span><br><span class="line">    <span class="keyword">return</span> html0</span><br><span class="line">url = <span class="string">'http://python.org/'</span></span><br><span class="line">html = HtmlText(url)</span><br><span class="line"><span class="comment"># print(html)</span></span><br><span class="line"><span class="comment"># ~~~~~~~~~~数据清理~~~~~~~~~~~</span></span><br><span class="line"><span class="comment">#==================普通分割str.split===============</span></span><br><span class="line"><span class="comment"># tokens = [tok for tok in html.split()]  #可直接运行</span></span><br><span class="line"><span class="comment">#==================正则分割re.split================</span></span><br><span class="line"><span class="comment">#-----------------\W匹配任意非单词性字符---------</span></span><br><span class="line"><span class="comment"># import re</span></span><br><span class="line"><span class="comment"># tokens = [tok for tok in re.split('\W+',html)] #可直接运行</span></span><br><span class="line"><span class="comment">#==================NLTK的clean_html================</span></span><br><span class="line"><span class="comment">#!!!!! 报错</span></span><br><span class="line"><span class="comment">#import nltk </span></span><br><span class="line"><span class="comment"># clean = nltk.clean_html(html)</span></span><br><span class="line"><span class="comment"># NotImplementedError: To remove HTML markup, use BeautifulSoup’s get_text() function，</span></span><br><span class="line"><span class="comment"># 原因是BeautifulSoup在相同方面做出了更好的成果之后，nltk自己删除了相应的同类函数，</span></span><br><span class="line"><span class="comment"># 可以用BeautifulSoup中的相应函数进行替代，所以上图的代码可以改为</span></span><br><span class="line"><span class="comment">#!!!!!</span></span><br><span class="line"><span class="comment">#==================bs4的get_text================</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">tokens = [tok <span class="keyword">for</span> tok <span class="keyword">in</span> BeautifulSoup(html,<span class="string">'lxml'</span>).get_text().split()]</span><br><span class="line"><span class="comment"># ~~~~~~~~~~清理完毕~~~~~~~~~~~</span></span><br><span class="line">print(<span class="string">'Total num of tokens:'</span>,str(len(tokens)))</span><br><span class="line">print(tokens[:<span class="number">5</span>])</span><br><span class="line"><span class="comment">#['Welcome', 'to', 'Python.org', '&#123;', '"@context":']</span></span><br></pre></td></tr></table></figure>
+<h3 id="清洗-词频统计-排序"><a href="#清洗-词频统计-排序" class="headerlink" title="清洗+词频统计+排序"></a>清洗+词频统计+排序</h3><p>注意字典取子集与字典排序。</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">HtmlText</span><span class="params">(url0)</span>:</span></span><br><span class="line">    html0 = requests.get(url).text</span><br><span class="line">    <span class="keyword">return</span> html0</span><br><span class="line">url = <span class="string">'http://python.org/'</span></span><br><span class="line">html = HtmlText(url)</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">tokens = [tok <span class="keyword">for</span> tok <span class="keyword">in</span> BeautifulSoup(html,<span class="string">'lxml'</span>).get_text().split()]</span><br><span class="line">freq_dis = &#123;&#125;</span><br><span class="line"><span class="keyword">for</span> tok <span class="keyword">in</span> tokens:</span><br><span class="line">    <span class="keyword">if</span> tok <span class="keyword">in</span> freq_dis:</span><br><span class="line">        freq_dis[tok] += <span class="number">1</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        freq_dis[tok] = <span class="number">1</span></span><br><span class="line"><span class="comment">#!!!</span></span><br><span class="line"><span class="comment">#freq_dis.sort() #AttributeError:'dict' object has no attribute 'sort'</span></span><br><span class="line"><span class="comment">#!!!</span></span><br><span class="line"><span class="keyword">import</span> operator</span><br><span class="line">sorted_freq_dis= sorted(freq_dis.items(), key=operator.itemgetter(<span class="number">1</span>),reverse=<span class="literal">True</span>)</span><br><span class="line"><span class="comment">#========dict.items(),key=key=operator.itemgetter(1)【按第二列排序】，reverse=True【从大到小】</span></span><br><span class="line">print(<span class="string">'Total num of tokens:'</span>,str(len(sorted_freq_dis)))</span><br><span class="line">print(sorted_freq_dis[:<span class="number">5</span>])</span><br><span class="line"><span class="comment">#&gt;&gt;&gt;</span></span><br><span class="line"><span class="comment">#[('Python', 54), ('&gt;&gt;&gt;', 24), ('and', 22), ('to', 18), ('the', 15)]</span></span><br></pre></td></tr></table></figure>
+<h3 id="nltk-词频-可视化"><a href="#nltk-词频-可视化" class="headerlink" title="nltk+词频+可视化"></a>nltk+词频+可视化</h3><p>nltk.FreqDist 返回class</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">HtmlText</span><span class="params">(url0)</span>:</span></span><br><span class="line">    html0 = requests.get(url).text</span><br><span class="line">    <span class="keyword">return</span> html0</span><br><span class="line">url = <span class="string">'http://python.org/'</span></span><br><span class="line">html = HtmlText(url)</span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line">tokens = [tok <span class="keyword">for</span> tok <span class="keyword">in</span> BeautifulSoup(html,<span class="string">'lxml'</span>).get_text().split()]</span><br><span class="line"><span class="keyword">import</span> nltk</span><br><span class="line">freq_dis_nltk = nltk.FreqDist(tokens)</span><br><span class="line">print(freq_dis_nltk)</span><br><span class="line"><span class="comment">#&lt;FreqDist with 584 samples and 1069 outcomes&gt;</span></span><br><span class="line">print(type(freq_dis_nltk)) </span><br><span class="line"><span class="comment"># &lt;class 'nltk.probability.FreqDist'&gt;</span></span><br><span class="line"><span class="keyword">for</span> k,v <span class="keyword">in</span> freq_dis_nltk.items():</span><br><span class="line">    print(k,v)</span><br><span class="line">    <span class="comment">#遗留问题：为什么没降序排列</span></span><br><span class="line">freq_dis_nltk.plot(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/6908911-5c1a13d8bdc6e418.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
+<h3 id="停用词（未实现）"><a href="#停用词（未实现）" class="headerlink" title="停用词（未实现）"></a>停用词（未实现）</h3><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;stopwords=[word.strip().lower() <span class="keyword">for</span> word <span class="keyword">in</span> open(<span class="string">"PATH/english.stop.</span></span><br><span class="line"><span class="string">txt"</span>)]</span><br><span class="line">&gt;&gt;&gt;clean_tokens=[tok <span class="keyword">for</span> tok <span class="keyword">in</span> tokens <span class="keyword">if</span> len(tok.lower())&gt;<span class="number">1</span> <span class="keyword">and</span> (tok.</span><br><span class="line">lower() <span class="keyword">not</span> <span class="keyword">in</span> stopwords)]</span><br><span class="line">&gt;&gt;&gt;Freq_dist_nltk=nltk.FreqDist(clean_tokens)</span><br><span class="line">&gt;&gt;&gt;Freq_dist_nltk.plot(<span class="number">50</span>, cumulative=<span class="literal">False</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://cjql.github.io/en/1980/12/31/NLTK/" data-id="ck4vcadg30012b0vx13vg8qkx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/en/2006/12/12/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          计算机网络
+        
+      </div>
+    </a>
+  
+  
+    <a href="/en/1980/12/12/%E9%BB%91%E5%AE%A2%E6%94%BB%E9%98%B2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">黑客攻防</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/en/categories/00%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">00学习方法</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/00%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/00%E5%85%A8%E6%99%AF/">00全景</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/00%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/">计算机</a><span class="category-list-count">12</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Web/">Web</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Web/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Web/Python/">Python</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/Web/Python/Flask/">Flask</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%9F%BA%E7%A1%80/">基础</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%9F%BA%E7%A1%80/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E5%B7%A5%E5%85%B7/">工具</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%88%AC%E8%99%AB/">爬虫</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%88%AC%E8%99%AB/Python/">Python</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E7%AE%97%E6%B3%95/">算法</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/%E9%BB%91%E5%AE%A2/">黑客</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/en/categories/%E8%B5%84%E6%BA%90/">资源</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2100/12/">十二月 2100</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2099/12/">十二月 2099</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2018/12/">十二月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2017/12/">十二月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2016/12/">十二月 2016</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2011/12/">十二月 2011</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/2006/12/">十二月 2006</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/1980/12/">十二月 1980</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/en/archives/1979/12/">十二月 1979</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/en/2100/12/31/%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86%E6%9C%AF%E8%AF%AD%E8%A1%A8/">知识整理术语表</a>
+          </li>
+        
+          <li>
+            <a href="/en/2100/12/12/cs_learning_path/">cs_learning_path</a>
+          </li>
+        
+          <li>
+            <a href="/en/2100/12/12/%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A8/">代码大全</a>
+          </li>
+        
+          <li>
+            <a href="/en/2099/12/12/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/">数据结构与算法</a>
+          </li>
+        
+          <li>
+            <a href="/en/2018/12/25/Flask%E8%AF%AD%E6%B3%95%E9%87%8A%E4%B9%89/">Flask语法释义</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 CJ<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  <div class="goBack" onclick="window.scrollTo('0','0')"></div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/en/" class="mobile-nav-link">Home</a>
+  
+    <a href="/en/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/en/fancybox/jquery.fancybox.css">
+
+  
+<script src="/en/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/en/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
